@@ -38,6 +38,7 @@ treesitter.setup {
 
   highlight = {
     enable = true,
+    -- enable = false,
   },
   rainbow = {
     enable = true,
@@ -125,13 +126,17 @@ require('spellsitter').setup {
   enable = true,
 }
 
-local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-local tree_sitter_matlab = vim.fn.stdpath 'data' .. '/site/pack/packer/git/tree-sitter-matlab'
-parser_config.matlab = {
-  install_info = {
-    url = tree_sitter_matlab,
-    files = { 'src/parser.c' },
-    branch = 'main',
-  },
-  filetype = 'matlab', -- if filetype does not agrees with parser name
-}
+----|
+----|     Tree-Sitter betta for matkab, with no support for highlight yet
+----|
+
+--local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+--local tree_sitter_matlab = vim.fn.stdpath 'data' .. '/site/pack/packer/git/tree-sitter-matlab'
+--parser_config.matlab = {
+--  install_info = {
+--    url = tree_sitter_matlab,
+--    files = { 'src/parser.c' },
+--    branch = 'main',
+--  },
+--  filetype = 'matlab', -- if filetype does not agrees with parser name
+--}
