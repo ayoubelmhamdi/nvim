@@ -1,6 +1,3 @@
-vim.cmd.filetype 'plugin indent on'
-vim.cmd.syntax 'on'
-
 local colors = require('onenord.colors').load()
 require('onenord').setup {
   theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
