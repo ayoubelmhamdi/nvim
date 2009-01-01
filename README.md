@@ -20,4 +20,5 @@ The `linux` philosophy in `configuration` for me, I think we should not make our
 
 
 ## TODO
-  - [x] fix lspconfig: using `exe 'e'`
+  - [x] fix lspconfig
+  - [ ] cmp: should at place in start
