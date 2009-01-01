@@ -1,4 +1,4 @@
--- require 'impatient'
+require 'impatient'
 
 vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
 
@@ -55,7 +55,7 @@ local startup = function()
 
   --
   -- Highlight should at the end
-  VIM_REQ 'c_matlab'
+  -- VIM_REQ 'c_matlab'
 end
 
 local augroup = vim.api.nvim_create_augroup('BlazinglyFast', {})
