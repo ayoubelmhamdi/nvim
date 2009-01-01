@@ -1,5 +1,5 @@
-syntax off
-filetype plugin indent off
+"syntax off
+"filetype plugin indent off
 
 function! SynStack()
   if !exists("*synstack")
@@ -7,6 +7,15 @@ function! SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunction
+
+" restore cursor position
+augroup restore_pos |
+  au!
+  au BufReadPost *
+      \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+      \ |   exe "normal! g`\"zz"
+      \ | endif
+augroup end
 
 lua << EOF
 -- disable netrw at the very start of your init.lua
