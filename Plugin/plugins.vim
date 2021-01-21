@@ -23,6 +23,7 @@ call vundle#begin()
 
         Plugin 'lilydjwg/colorizer'
         Plugin 'joom/vim-commentary'
+        Plugin 'justinmk/vim-sneak'
 
         Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plugin 'junegunn/fzf.vim'

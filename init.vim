@@ -6,6 +6,7 @@
   source $HOME/.config/nvim/confPlugin/coc/coc.vim
   source $HOME/.config/nvim/confPlugin/coc/coc-extensions.vim
   source $HOME/.config/nvim/confPlugin/ultiSnips.vim
+  source $HOME/.config/nvim/confPlugin/sneak.vim
   source $HOME/.config/nvim/confPlugin/javascript.vim
   source $HOME/.config/nvim/confPlugin/fastfold.vim
   source $HOME/.config/nvim/confPlugin/fzf.vim
