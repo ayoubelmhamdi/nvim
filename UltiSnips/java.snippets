@@ -301,12 +301,14 @@ public static void main(String[] args)`!p nl(snip)`{
 }
 endsnippet
 
-snippet try "try/catch" b
+snippet trya "try/catch" b
 try {
 	$1${VISUAL}
-} catch(${2:Exception} ${3:e}){
-	${4:e.printStackTrace();}
+} catch(Exception ${2:e}){
+	${2:e}.printStackTrace();
+	$3${VISUAL}
 }
+$4${VISUAL}
 endsnippet
 
 snippet mt "method throws" b
