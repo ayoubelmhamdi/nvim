@@ -1,11 +1,9 @@
 let g:snipMate = { 'snippet_version' : 1 }
-" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
-" - https://github.com/Valloric/YouCompleteMe
-" - https://github.com/nvim-lua/completion-nvim
+
+" // tab is now work with 
+" //list tab down s-tab up
+" //list c-n down c-p up
+" //jumb c-j down c-k up
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"

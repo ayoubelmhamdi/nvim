@@ -6,7 +6,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
-
         "airling"
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
@@ -35,7 +34,6 @@ call vundle#begin()
         Plugin 'SirVer/ultisnips'
         Plugin 'honza/vim-snippets'
         Plugin 'liuchengxu/vim-which-key'
-
         "viw hex as #666fff"
         Plugin 'lilydjwg/colorizer'
         "commentary"

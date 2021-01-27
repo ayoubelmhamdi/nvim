@@ -2,7 +2,9 @@
 
 " Source Active
   source $HOME/.config/nvim/Plugin/plugins.vim
+  source $HOME/.config/nvim/ayoub-nvim/top.vim
   source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
+  source $HOME/.config/nvim/ayoub-nvim/mycolor.vim
   source $HOME/.config/nvim/confPlugin/coc/coc.vim
   source $HOME/.config/nvim/confPlugin/coc/coc-extensions.vim
   source $HOME/.config/nvim/confPlugin/ultiSnips.vim
@@ -11,6 +13,8 @@
   source $HOME/.config/nvim/confPlugin/fastfold.vim
   source $HOME/.config/nvim/confPlugin/fzf.vim
   source $HOME/.config/nvim/confPlugin/which-key.vim
+  source $HOME/.config/nvim/confPlugin/spell.vim
+  source $HOME/.config/nvim/ayoub-nvim/bottom.vim
 
 " Source Disactive
 " source $HOME/.config/nvim/confPlugin/vimwiki.vim
