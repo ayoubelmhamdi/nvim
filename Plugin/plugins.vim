@@ -1,4 +1,4 @@
-" vundel
+" vundel from branch move-vundell
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
