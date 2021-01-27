@@ -35,9 +35,26 @@ nnoremap 7dd 4dd
 nnoremap 8dd 9dd
 nnoremap 9dd 10dd
 
-" snbak
+" snak
 nnoremap ,gg :VimGameSnake<CR>
+"unused
+"nnoremap ,, <Plug>(FastFoldUpdate) 
+
+
+" Move 1 more lines up or down in normal and visual selection modes.
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+
+
+" Navigate around splits with a single key combo.
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
 
 
 
-nnoremap ,, <Plug>(FastFoldUpdate) 
+" Cycle through splits.
+"nnoremap <S-Tab> <C-w>w

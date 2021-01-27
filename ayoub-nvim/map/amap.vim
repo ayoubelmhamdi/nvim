@@ -5,3 +5,7 @@ map <A-k> <C-w>k
 map <A-l> <C-w>l
 
 
+""Fix Shift+Tab
+nnoremap <leader><Tab> <<
+inoremap <leader><Tab> <Esc><<i
+

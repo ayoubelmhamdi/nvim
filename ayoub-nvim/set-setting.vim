@@ -1,94 +1,107 @@
 let mapleader="\<Space>"
 let maplocalleader = ','
-set langmenu=en_US
-let $LANG = 'en_US'
-"source $VIMRUNTIME/delmenu.vim
-"source $VIMRUNTIME/menu.vim
-
-
-set wrap 
-" disactive / stop linebreak / retour ligne
-"set termguicolors
-"iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiixxxxxxxxxxxxxxxx
-"colorscheme desert
-colorscheme Tomorrow-Night-Eighties
-highlight Normal ctermbg=232
 
 syntax on
 filetype plugin on
 
 
+" disactive / stop linebreak / retour ligne
 
-
-set cursorline " Cursor line
+"set termguicolors
+"colorscheme desert
+set cursorline
 hi CursorLine   cterm=bold ctermbg=234
-au InsertEnter * hi Normal  ctermbg=236
+au InsertEnter * hi Normal ctermbg=236
 au InsertLeave * hi Normal ctermbg=234
+colorscheme Tomorrow-Night-Eighties
+highlight Normal ctermbg=234
+set bg=dark
 
-"  ctermfg  use fir change color of current ligne
-"hi CursorLine   cterm=bold ctermbg=234 ctermfg=120
-"highlight Cursor ctermfg=white ctermbg=red
-
-"set bg=light				" backgound
-
-set shiftwidth=2            " Tab Settings
-"set softtabstop=2           " Tab Settings
-"set tabstop=4               "
-set ignorecase				"
-set smartcase				"
-"set clipboard+=unnamedplus	" external copy past
-"set encoding=utf-8			"
-set go=a					"
-set mouse=a					"
-set laststatus=0			"
-set nohlsearch				"
-set noruler					"
-set noshowcmd				"
-set noshowmode				"
-set number relativenumber	"
-set smartindent		        " best forma of code
-set title					" title below
-set updatetime=51			" plugin update in ms
-set wildmode=longest,list,full	" !!! Enable autocompletion
-set splitbelow splitright	" !! Splits open at the bottom and right
-
-
-
-
+set wrap 
+set autoindent
+set smartindent	
+set smarttab
 set expandtab
-set laststatus=0
-set shortmess+=afilmnrxoOtT
-set hidden
-
-
+set shiftwidth=8
+set softtabstop=4 
+set tabstop=4 
+set ignorecase
+set clipboard=unnamedplus
+set encoding=utf-8
+set mouse=a
+set number relativenumber
+set title
+set updatetime=300
+set splitbelow splitright
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc
 set wildignore+=eggs/**
 set wildignore+=*.egg-info/**
+set noswapfile
+set nobackup
 
-"vim ex1i"
-""Fix Shift+Tab
-"nmap <S-Tab> <<
-"imap <S-Tab> <Esc><<i
+set autoread
+set backspace=indent,eol,start
+set backupdir=/tmp//,.
+set colorcolumn=100
+set complete+=kspell
+set completeopt=menuone,longest
+set directory=$HOME/.local/tmp//,.
+set formatoptions=tcqrn1
+set go=a
+set hidden
+set hlsearch
+set incsearch
+set laststatus=2
+set matchpairs+=<:>
+set mmp=5000
+set modelines=2
+set noerrorbells visualbell t_vb=
+set nohlsearch
+set noruler
+set noshiftround
+set nospell
+set nostartofline
+set regexpengine=1
+set ruler
+set scrolloff=3
+set shortmess+=c
+set showcmd
+set showmatch
+set showmode
+set smartcase
+set spelllang=en_us
+set textwidth=0
+set timeoutlen=1000
+set ttimeout
+set ttimeoutlen=0
+set whichwrap=b,s,<,>
+set wildmenu
+set wildmode=full
+set wildmode=longest,list,full
+set undodir=/tmp
+set undofile
+set virtualedit=block
+set ttyfast
+if !has('nvim')
+  set ttymouse=sgr
+endif
+
 "
 "
 "set tw=0
 "set wm=0
 "set linebreak
 "
-"filetype on                   " try to detect filetypes
-"filetype plugin indent on     " enable loading indent file for filetype
-"set number                    " Display line numbers
 "set numberwidth=1             " using only 1 column (and 1 space) while possible
 "set wildmenu                  " Menu completion in command mode on <Tab>
 "set wildmode=full             " <Tab> cycles between all matching choices.
 "set showcmd
 "
-"set colorcolumn=80
+"set colorcolumn=99
 "
 "
 "
-"set ls=2  "Always show status line"
 "
 "
 "set ruler

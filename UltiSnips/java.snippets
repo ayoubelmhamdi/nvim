@@ -305,7 +305,7 @@ snippet trya "try/catch" b
 try {
 	$1${VISUAL}
 } catch(Exception ${2:e}){
-	${2:e}.printStackTrace();
+	$2.printStackTrace();
 	$3${VISUAL}
 }
 $4${VISUAL}
