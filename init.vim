@@ -5,9 +5,11 @@
   source $HOME/.config/nvim/ayoub-nvim/top.vim
   source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
   source $HOME/.config/nvim/ayoub-nvim/mycolor.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc.vim
   source $HOME/.config/nvim/confPlugin/coc/coc-extensions.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc-map.vim
   source $HOME/.config/nvim/confPlugin/ultiSnips.vim
+  source $HOME/.config/nvim/confPlugin/syntastic.vim
   source $HOME/.config/nvim/confPlugin/sneak.vim
   source $HOME/.config/nvim/confPlugin/javascript.vim
   source $HOME/.config/nvim/confPlugin/fastfold.vim
@@ -48,4 +50,6 @@ source ~/.config/nvim/ayoub-nvim/leader/vleader.vim
 "source ~/.config/nvim/ayoub-nvim/snippet/python.vim
 "source ~/.config/nvim/ayoub-nvim/snippet/shell.vim
 "source ~/.config/nvim/ayoub-nvim/snippet/js.vim
+" my script
+source ~/.config/nvim/ayoub-nvim/script/script1.vim
 

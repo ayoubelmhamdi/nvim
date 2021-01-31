@@ -1,0 +1,42 @@
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set backupdir=/tmp//,.
+set colorcolumn=80
+set complete+=kspell
+set completeopt=menuone,longest
+set directory=/tmp//,.
+set smarttab
+set formatoptions=tcqrn1
+set hlsearch
+set incsearch
+set matchpairs+=<:> " Use % to jump between pairs
+set mmp=5000
+set modelines=2
+set noerrorbells visualbell t_vb=
+set noshiftround
+set nospell
+set nostartofline
+set regexpengine=1
+set ruler
+set scrolloff=3
+set showcmd
+set showmatch
+set showmode
+set softtabstop=2
+set spelllang=en_us
+set tabstop=2
+set textwidth=0
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
+if !has('nvim')
+  set ttymouse=sgr
+endif
+set undodir=/tmp
+set undofile
+set virtualedit=block
+set whichwrap=b,s,<,>
+set wildmenu
+set wildmode=full

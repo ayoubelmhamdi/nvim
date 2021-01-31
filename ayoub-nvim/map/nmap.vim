@@ -58,3 +58,4 @@ nnoremap <C-j> <C-w><C-j>
 
 " Cycle through splits.
 "nnoremap <S-Tab> <C-w>w
+

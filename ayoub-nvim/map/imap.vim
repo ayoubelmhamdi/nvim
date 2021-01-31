@@ -1,5 +1,5 @@
 " imap
-imap jj <Esc>
+" imap jj <Esc>
 
 " 1     <Esc>
 " 2     <CR>
@@ -9,20 +9,20 @@ imap jj <Esc>
 
 " general insert commands
 " :r <++>
-inoremap ;g <++>
-" :r <-->
-inoremap ;gi <-->
-" :r <leader>
-inoremap ;l <leader/><Esc>F/xa
-" :r <Space>
-inoremap ;es <Esc/><Esc>F/xa
-" :r <CR>
-inoremap ;c <CR/><Esc>F/xa
-" :r <Entre>
-inoremap ;en <Enter/><Esc>F/xa
-" :r <space>
-inoremap ;s <Space/><Esc>F/xa
-" delete ?<--> 
-nnoremap ;rm a?<--><Enter>"_c4l
+" inoremap ;g <++>
+" " :r <-->
+" inoremap ;gi <-->
+" " :r <leader>
+" inoremap ;l <leader/><Esc>F/xa
+" " :r <Space>
+" inoremap ;es <Esc/><Esc>F/xa
+" " :r <CR>
+" inoremap ;c <CR/><Esc>F/xa
+" " :r <Entre>
+" inoremap ;en <Enter/><Esc>F/xa
+" " :r <space>
+" inoremap ;s <Space/><Esc>F/xa
+" " delete ?<--> 
+" nnoremap ;rm a?<--><Enter>"_c4l
 
 

@@ -6,8 +6,8 @@ nnoremap <leader>wq :wq!
 nnoremap <leader>w :w<CR>:source $MYVIMRC<CR>
 
 "new tab
-nnoremap <leader>n :tabnew<cr>
-nnoremap <leader>v  :tabnew<cr>:edit $HOME/.config/nvim/ayoub-nvim/set-setting.vim<CR>
+nnoremap <leader>n :tabnew<cr>:e<Space>
+nnoremap <leader>v :tabnew<cr>:edit $HOME/.config/nvim/ayoub-nvim/set-setting.vim<CR>
 nnoremap <leader>vi :tabnew<cr>:edit $HOME/.config/nvim/init.vim<CR>
 nnoremap <leader>vp :tabnew<cr>:edit $HOME/.config/nvim/Plugin/plugins.vim<CR>
 
