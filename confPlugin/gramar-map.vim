@@ -14,22 +14,22 @@ endfunction
 
 
 "	Move the cursor to the info window
-nnoremap <leader>-aaa <Plug>(grammarous-move-to-info-window) 
+nnoremap <localleader>a1 <Plug>(grammarous-move-to-info-window) 
 "	Open the info window for the error under the cursor
-nnoremap <leader>-aaa <Plug>(grammarous-open-info-window) 
+nnoremap <localleader>a2 <Plug>(grammarous-open-info-window) 
 "	Reset the current check
-nnoremap <leader>-aaa <Plug>(grammarous-reset) 
+nnoremap <localleader>a3 <Plug>(grammarous-reset) 
 "	Fix the error under the cursor automatically
-nnoremap <leader>-aaa <Plug>(grammarous-fixit) 
+nnoremap <localleader>a4 <Plug>(grammarous-fixit) 
 "	Fix all the errors in a current buffer automatically
-nnoremap <leader>-aaa <Plug>(grammarous-fixall) 
+nnoremap <localleader>a5 <Plug>(grammarous-fixall) 
 "	Close the information window from checked buffer
-nnoremap <leader>-aaa <Plug>(grammarous-close-info-window) 
+nnoremap <localleader>a7 <Plug>(grammarous-close-info-window) 
 "	Remove the error under the cursor
-nnoremap <leader>-aaa <Plug>(grammarous-remove-error) 
+nnoremap <localleader>a8 <Plug>(grammarous-remove-error) 
 "	Disable the grammar rule under the cursor
-nnoremap <leader>-aaa <Plug>(grammarous-disable-rule) 
+nnoremap <localleader>a9 <Plug>(grammarous-disable-rule) 
 "	Move cursor to the next error
-nnoremap <leader>-aaa <Plug>(grammarous-move-to-next-error) 
+nnoremap <localleader>b1 <Plug>(grammarous-move-to-next-error) 
 "	Move cursor to the previous error
-nnoremap <leader>-aaa <Plug>(grammarous-move-to-previous-error) 
+nnoremap <localleader>b2 <Plug>(grammarous-move-to-previous-error) 

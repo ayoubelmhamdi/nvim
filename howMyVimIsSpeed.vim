@@ -10,3 +10,4 @@ echo reltimestr(reltime(startvim))
 " add var in top and echo in last to calcule time 
 
 
+"
