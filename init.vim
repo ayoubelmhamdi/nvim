@@ -1,21 +1,56 @@
 " init vim
 
+let startvim = reltime()
+
+
 " Source Active
+  " vundel plugins
   source $HOME/.config/nvim/Plugin/plugins.vim
+  " vim set + theme
   source $HOME/.config/nvim/ayoub-nvim/top.vim
   source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
   source $HOME/.config/nvim/ayoub-nvim/mycolor.vim
+  "vim spell
+  source $HOME/.config/nvim/confPlugin/spell.vim
+
+  " Plugin
+  "sneak
+  source $HOME/.config/nvim/confPlugin/sneak.vim
+  " fzf
+  source $HOME/.config/nvim/confPlugin/fzf.vim
+  " "fast fold
+  " source $HOME/.config/nvim/confPlugin/fastfold.vim
+  "which key
+  source $HOME/.config/nvim/confPlugin/which-key.vim
+
+  " Programation
+  " js
+  source $HOME/.config/nvim/confPlugin/javascript.vim
+  " js map
+  source $HOME/.config/nvim/confPlugin/javascript-map.vim
+
+  "IDE VIM
+  " coc
   source $HOME/.config/nvim/confPlugin/coc/coc-extensions.vim
   source $HOME/.config/nvim/confPlugin/coc/coc.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc-map.vim
+  " yocompleme
+  source $HOME/.config/nvim/confPlugin/yocompleteme.vim
+  source $HOME/.config/nvim/confPlugin/yocompleteme-map.vim
+  " snip
   source $HOME/.config/nvim/confPlugin/ultiSnips.vim
+  "map coc+snip
+  source $HOME/.config/nvim/confPlugin/coc/coc_snip-map.vim
+  "syntastic
   source $HOME/.config/nvim/confPlugin/syntastic.vim
-  source $HOME/.config/nvim/confPlugin/sneak.vim
-  source $HOME/.config/nvim/confPlugin/javascript.vim
-  source $HOME/.config/nvim/confPlugin/fastfold.vim
-  source $HOME/.config/nvim/confPlugin/fzf.vim
-  source $HOME/.config/nvim/confPlugin/which-key.vim
-  source $HOME/.config/nvim/confPlugin/spell.vim
+  " syntastic map
+  source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+  " Gramare
+  " source $HOME/.config/nvim/confPlugin/gramarwq.1vim
+  " source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+
+
+
+  " bottom vim conf
   source $HOME/.config/nvim/ayoub-nvim/bottom.vim
 
 " Source Disactive
@@ -53,3 +88,8 @@ source ~/.config/nvim/ayoub-nvim/leader/vleader.vim
 " my script
 source ~/.config/nvim/ayoub-nvim/script/script1.vim
 
+
+
+
+
+echo reltimestr(reltime(startvim))

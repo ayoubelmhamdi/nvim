@@ -4,6 +4,7 @@ set autoindent
 set smartindent	
 set smarttab
 set expandtab
+" set foldmethod=manual
 set shiftwidth=4
 set softtabstop=4 
 set tabstop=4 
@@ -25,7 +26,7 @@ set nobackup
 set autoread
 set backspace=indent,eol,start
 set backupdir=/tmp//,.
-"set colorcolumn=100
+set colorcolumn=100
 set complete+=kspell
 set completeopt=menuone,longest
 set directory=$HOME/.local/tmp//,.

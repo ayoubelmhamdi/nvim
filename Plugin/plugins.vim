@@ -1,58 +1,78 @@
-" vundel from branch move-vundell
+        "vundel git move-vundle
+
+" 
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
 " set rtp+=~/.config/nvim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-        "airling"
+        Plugin 'VundleVim/Vundle.vim'
+
+        "airling
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
-        "git"
+        "git
 	Plugin 'tpope/vim-fugitive'
-        "sintastic"
-	Plugin 'scrooloose/syntastic'
-        "surround"
-	Plugin 'tpope/vim-surround'
-        "fastfold"
-        Plugin 'konfekt/fastfold'
+        "fastfold
+        " Plugin 'konfekt/fastfold'
 
         "game"
-	Plugin 'johngrib/vim-game-snake'
-        "programation"
-        "processing"
-        Plugin 'sophacles/vim-processing'
-        "js"
-        Plugin 'pangloss/vim-javascript'
-        "intelegent"
-        Plugin 'neoclide/coc.nvim'
-        Plugin 'dense-analysis/ale'
-"        Plugin 'MarcWeber/vim-addon-mw-utils'
-"        Plugin 'tomtom/tlib_vim'
-"        Plugin 'garbas/vim-snipmate'
-        Plugin 'SirVer/ultisnips'
-        Plugin 'honza/vim-snippets'
-        Plugin 'liuchengxu/vim-which-key'
-        "viw hex as #666fff"
+        Plugin 'johngrib/vim-game-snake'
+        "viw hex as #666fff
         Plugin 'lilydjwg/colorizer'
-        "commentary"
-        Plugin 'joom/vim-commentary'
-        "snaek search"
+        "which key
+        Plugin 'liuchengxu/vim-which-key'
+        "snaek search
         Plugin 'justinmk/vim-sneak'
-        "fzf"
+        "fzf
         Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plugin 'junegunn/fzf.vim'
         Plugin 'airblade/vim-rooter'
 
+        "programation
+        "processing
+        Plugin 'sophacles/vim-processing'
+        "js"
+        Plugin 'pangloss/vim-javascript'
+        "intelegent"
+
+        "IDE  VIM
+        "coc
+        Plugin 'neoclide/coc.nvim'
+        "ale
+        Plugin 'dense-analysis/ale'
+        " yocompleme
+        Plugin 'valloric/youcompleteme'
+
+        "syntastic
+        Plugin 'scrooloose/syntastic'
+        " grammare
+        Plugin 'rhysd/vim-grammarous'
+        "commentary
+        Plugin 'joom/vim-commentary'
+        "surround
+        Plugin 'tpope/vim-surround'
+        "snip
+        " Engien snipppets + snipmate
+        Plugin 'SirVer/ultisnips'
+        " big  snippets exemple
+        Plugin 'honza/vim-snippets'
+
+
+
+        " not used yet
+"       Plugin 'MarcWeber/vim-addon-mw-utils'
+"       Plugin 'tomtom/tlib_vim'
+"       Plugin 'garbas/vim-snipmate'
         "Disacyive now
 "       Plugin 'majutsushi/tagbar'
 "       Plugin 'scrooloose/nerdtree'
-"       "latex is disactived"
+"       "latex is disactived
 "       Plugin 'lervag/vimtex'
 "       Plugin 'vim-latex/vim-latex'
 "       Plugin 'neoclide/coc-vimtex'
-"........
+"
 call vundle#end()            " required
 filetype plugin indent on    " required
 
