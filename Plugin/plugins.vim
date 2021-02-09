@@ -41,9 +41,9 @@ call vundle#begin()
         "coc
         Plugin 'neoclide/coc.nvim'
         "ale
-        Plugin 'dense-analysis/ale'
+        " Plugin 'dense-analysis/ale'
         " yocompleme
-        Plugin 'valloric/youcompleteme'
+        " Plugin 'valloric/youcompleteme'
 
         "syntastic
         Plugin 'scrooloose/syntastic'

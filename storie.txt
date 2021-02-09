@@ -1,0 +1,4 @@
+
+je l'ai revue devant le portail de l'immeuble
+:for i in range(5) | put='je l ai '.i.' revue devant le portail de l immeuble' | endfor
+

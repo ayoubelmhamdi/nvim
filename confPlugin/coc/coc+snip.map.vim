@@ -1,23 +1,28 @@
 " Coc mapping
+"
+"coc orgin snip :
+"must be def after ultiSnips 
+    imap <C-l> <Plug>(coc-snippets-expand)
+    "correct if one do select this
+    imap <C-j> <Plug>(coc-snippets-expand-jump)
+    vmap <C-j> <Plug>(coc-snippets-select)
+    let g:coc_snippet_next = '<c-j>'
+    let g:coc_snippet_prev = '<c-k>'
 
 
 " this lines for use tab to
 " view list and scroll in this list
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
-
-imap <C-l> <Plug>(coc-snippets-expand)
-"correct if one do select this
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-vmap <C-j> <Plug>(coc-snippets-select)
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 
+" TTT: changr indent original tab to
+    nnoremap > v>
+    nnoremap < v<
+    vnoremap > >gv
+    vnoremap < <gv
 
 
 
@@ -62,5 +67,3 @@ nmap <silent> gr <Plug>(coc-references)
 " nmap <leader>rn <Plug>(coc-rename)
 
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()

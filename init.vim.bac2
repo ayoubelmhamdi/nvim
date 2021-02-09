@@ -1,0 +1,144 @@
+" init vim
+let startvim = reltime()
+echo "start vim"
+echo reltimestr(reltime(startvim))
+
+nnoremap <Space>w :w!<CR>:source $MYVIMRC<CR>
+nnoremap <Space>q :q!<CR>
+
+"for i in range(1000*1000/2)
+"endfor
+
+
+
+
+
+
+
+
+
+
+
+" " Source Active
+"   " vundel plugins
+source $HOME/.config/nvim/Plugin/plugins.vim
+
+echo "plugin"
+echo reltimestr(reltime(startvim))
+"   " vim set + theme
+source $HOME/.config/nvim/ayoub-nvim/top.vim
+echo "top"
+echo reltimestr(reltime(startvim))
+source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
+echo "setsettin"
+echo reltimestr(reltime(startvim))
+"   source $home/.config/nvim/ayoub-nvim/mycolor.vim
+echo "mycolor"
+echo reltimestr(reltime(startvim))
+"   "vim spell
+"   source $home/.config/nvim/confplugin/spell.vim
+echo "spell"
+echo reltimestr(reltime(startvim))
+
+"   " plugin
+"   "sneak
+"   source $home/.config/nvim/confplugin/sneak.vim
+echo "sneak"
+echo reltimestr(reltime(startvim))
+"   " fzf
+source $home/.config/nvim/confplugin/fzf.vim
+echo "fzf"
+echo reltimestr(reltime(startvim))
+"   " fast fold
+    " source $home/.config/nvim/confplugin/fastfold.vim
+"   "which key
+    source $home/.config/nvim/confplugin/which-key.vim
+echo "whicheey"
+echo reltimestr(reltime(startvim))
+
+"   " programation
+"   " js
+"   source $home/.config/nvim/confplugin/javascript.vim
+"   " js map
+"   source $home/.config/nvim/confplugin/javascript-map.vim
+echo "js"
+echo reltimestr(reltime(startvim))
+
+"   "ide vim
+"   " coc
+"   source $home/.config/nvim/confplugin/coc/coc-extensions.vim
+"   source $home/.config/nvim/confplugin/coc/coc.vim
+echo "coc"
+echo reltimestr(reltime(startvim))
+"   " yocompleme
+"   source $home/.config/nvim/confplugin/yocompleteme.vim
+"   source $HOME/.config/nvim/confPlugin/yocompleteme-map.vim
+echo "yocompleme"
+echo reltimestr(reltime(startvim))
+"   " snip
+"   source $HOME/.config/nvim/confPlugin/ultiSnips.vim
+echo "ultisnip"
+echo reltimestr(reltime(startvim))
+"   "map coc+snip
+"   source $HOME/.config/nvim/confPlugin/coc/coc_snip-map.vim
+"   "syntastic
+"   source $HOME/.config/nvim/confPlugin/syntastic.vim
+"   " syntastic map
+"   source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+echo "syntastic"
+echo reltimestr(reltime(startvim))
+"   " Gramare
+"   " source $HOME/.config/nvim/confPlugin/gramar.vim
+"   " source $HOME/.config/nvim/confPlugin/gramar-map.vim
+echo "gramar"
+echo reltimestr(reltime(startvim))
+"   " source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+
+
+
+"   " bottom vim conf
+"   source $HOME/.config/nvim/ayoub-nvim/bottom.vim
+echo "bittom"
+echo reltimestr(reltime(startvim))
+
+" " Source Disactive
+" " source $HOME/.config/nvim/confPlugin/vimwiki.vim
+" " source $HOME/.config/nvim/confPlugin/goyo.vim
+" " source $HOME/.config/nvim/confPlugin/fzf.vim
+" " source $HOME/.config/nvim/confPlugin/easy-motion.vim
+" " source $HOME/.config/nvim/confPlugin/undotree.vim
+" " source $HOME/.config/nvim/confPlugin/emmet.vim
+" " source $HOME/.config/nvim/confPlugin/table-mode.vim
+" " source $HOME/.config/nvim/confPlugin/git-gutter.vim
+" " source $HOME/.config/nvim/confPlugin/airline.vim
+" " source $HOME/.config/nvim/confPlugin/hexokinase.vim
+" " source $HOME/.config/nvim/confPlugin/fern.vim
+" " source $HOME/.config/nvim/confPlugin/closetag.vim
+" "map Active
+" source ~/.config/nvim/ayoub-nvim/map/amap.vim
+" source ~/.config/nvim/ayoub-nvim/map/nmap.vim
+" source ~/.config/nvim/ayoub-nvim/map/cmap.vim
+" source ~/.config/nvim/ayoub-nvim/map/imap.vim
+" source ~/.config/nvim/ayoub-nvim/map/vmap.vim
+" "leader Active
+" source ~/.config/nvim/ayoub-nvim/leader/aleader.vim
+" source ~/.config/nvim/ayoub-nvim/leader/nleader.vim
+" source ~/.config/nvim/ayoub-nvim/leader/cleader.vim
+" source ~/.config/nvim/ayoub-nvim/leader/ileader.vim
+" source ~/.config/nvim/ayoub-nvim/leader/vleader.vim
+" " snippet disactived
+" "source ~/.config/nvim/ayoub-nvim/snippet/java.vim
+" "source ~/.config/nvim/ayoub-nvim/snippet/markdown.vim
+" "source ~/.config/nvim/ayoub-nvim/snippet/c.vim
+" "source ~/.config/nvim/ayoub-nvim/snippet/python.vim
+" "source ~/.config/nvim/ayoub-nvim/snippet/shell.vim
+" "source ~/.config/nvim/ayoub-nvim/snippet/js.vim
+" " my script
+" source ~/.config/nvim/ayoub-nvim/script/script1.vim
+
+
+
+
+
+
+echo reltimestr(reltime(startvim))

@@ -27,26 +27,24 @@ let startvim = reltime()
   " js
   source $HOME/.config/nvim/confPlugin/javascript.vim
   " js map
-  source $HOME/.config/nvim/confPlugin/javascript-map.vim
+  source $HOME/.config/nvim/confPlugin/javascript.map.vim
 
   "IDE VIM
-  " coc
-  source $HOME/.config/nvim/confPlugin/coc/coc-extensions.vim
+  " coc + ultiSnips
+  source $HOME/.config/nvim/confPlugin/coc/extensions.vim
   source $HOME/.config/nvim/confPlugin/coc/coc.vim
-  " yocompleme
-  source $HOME/.config/nvim/confPlugin/yocompleteme.vim
-  source $HOME/.config/nvim/confPlugin/yocompleteme-map.vim
-  " snip
-  source $HOME/.config/nvim/confPlugin/ultiSnips.vim
-  "map coc+snip
-  source $HOME/.config/nvim/confPlugin/coc/coc_snip-map.vim
+  source $HOME/.config/nvim/confPlugin/coc/snips.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc+snip.map.vim
   "syntastic
   source $HOME/.config/nvim/confPlugin/syntastic.vim
   " syntastic map
-  source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+  source $HOME/.config/nvim/confPlugin/syntastic.map.vim
   " Gramare
-  " source $HOME/.config/nvim/confPlugin/gramarwq.1vim
-  " source $HOME/.config/nvim/confPlugin/syntastic-map.vim
+  " source $HOME/.config/nvim/confPlugin/gramar.vim
+  " source $HOME/.config/nvim/confPlugin/gramar.map.vim
+  " yocompleme
+  " source $HOME/.config/nvim/confPlugin/yocompleteme.vim
+  " source $HOME/.config/nvim/confPlugin/yocompleteme-map.vim
 
 
 
