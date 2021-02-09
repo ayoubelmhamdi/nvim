@@ -60,7 +60,7 @@ set showtabline=2
 set smartcase
 set spelllang=en_us
 set textwidth=0
-set timeoutlen=100
+set timeoutlen=300
 set ttimeout
 set ttimeoutlen=0
 set whichwrap=b,s,<,>

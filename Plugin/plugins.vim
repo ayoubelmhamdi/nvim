@@ -12,8 +12,6 @@ call vundle#begin()
         "airling
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
-        "git
-	Plugin 'tpope/vim-fugitive'
         "fastfold
         " Plugin 'konfekt/fastfold'
 
@@ -35,16 +33,19 @@ call vundle#begin()
         Plugin 'sophacles/vim-processing'
         "js"
         Plugin 'pangloss/vim-javascript'
-        "intelegent"
 
-        "IDE  VIM
+
+
+
+        "intelegent"
         "coc
         Plugin 'neoclide/coc.nvim'
+        " Gui debugin
+        Plugin 'puremourning/vimspector'
         "ale
         " Plugin 'dense-analysis/ale'
         " yocompleme
         " Plugin 'valloric/youcompleteme'
-
         "syntastic
         Plugin 'scrooloose/syntastic'
         " grammare
@@ -53,11 +54,23 @@ call vundle#begin()
         Plugin 'joom/vim-commentary'
         "surround
         Plugin 'tpope/vim-surround'
+        " repeat complex motion m
+        Plugin 'tpope/vim-repeat'
+        " undotree
+        Plugin 'mbbill/undotree'
         "snip
         " Engien snipppets + snipmate
         Plugin 'SirVer/ultisnips'
         " big  snippets exemple
         Plugin 'honza/vim-snippets'
+
+        " Git
+        " fu-git-ive
+        Plugin 'tpope/vim-fugitive'
+        " vim rooter : deja adding in top
+        " adding +/- foreach line modifier
+        Plugin 'mhinz/vim-signify'
+
 
 
 
