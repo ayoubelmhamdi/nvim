@@ -79,8 +79,8 @@
   "pyright.disableOrganizeImports": false,
 
   // snippets
-  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.ultisnips.directories": ["snipShort", "snipBig", "snipPython"],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snipsShort",
 
   // emmet
   "emmet.includeLanguages": {

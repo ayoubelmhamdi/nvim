@@ -32,9 +32,8 @@ let startvim = reltime()
   "IDE VIM
   " coc + ultiSnips
   source $HOME/.config/nvim/confPlugin/coc/extensions.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc.vim
-  source $HOME/.config/nvim/confPlugin/coc/snips.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc+snip.map.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc+snips.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc+snips.map.vim
   "syntastic
   source $HOME/.config/nvim/confPlugin/syntastic.vim
   " syntastic map

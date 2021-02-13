@@ -1,5 +1,6 @@
+
+"\ 'coc-snippets',
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
   \ 'coc-actions',
   \ 'coc-sh',
   \ 'coc-java-debug',

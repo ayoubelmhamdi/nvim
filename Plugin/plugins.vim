@@ -9,7 +9,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
         Plugin 'VundleVim/Vundle.vim'
 
-        "airling
+        " themes
+        Plugin 'morhetz/gruvbox'
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
         "fastfold
@@ -61,7 +62,8 @@ call vundle#begin()
         "snip
         " Engien snipppets + snipmate
         Plugin 'SirVer/ultisnips'
-        " big  snippets exemple
+        " big  snippets exemple commit for 
+        " edit by my self
         Plugin 'honza/vim-snippets'
 
         " Git

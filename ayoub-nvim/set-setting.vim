@@ -2,15 +2,17 @@
 set wrap 
 set autoindent
 set smartindent	
-set smarttab
-set expandtab
-" set foldmethod=manual
-set formatoptions=cro
-set shiftwidth=4
-set softtabstop=4 
+
 set tabstop=4 
-set ignorecase
-set clipboard+=unnamedplus
+set softtabstop=4 
+set shiftwidth=4
+set expandtab
+set smarttab
+
+set backspace=indent,eol,start
+" set clipboard=unnamedplus
+set fileformat=unix
+
 set encoding=utf-8
 set mouse=a
 set number relativenumber
@@ -21,21 +23,22 @@ set splitbelow splitright
 set wildignore+=*.o,*.obj,.git,*.pyc
 set wildignore+=eggs/**
 set wildignore+=*.egg-info/**
-set noswapfile
-set nobackup
 
+"dis now
+" set foldmethod=manual
+
+
+" by Alphabet
 set autoread
-set backspace=indent,eol,start
-set backupdir=/tmp//,.
 set colorcolumn=500
 set complete+=kspell
 set completeopt=menuone,longest
-set directory=$HOME/.local/tmp//,.
 set fileencoding=utf-8
-set formatoptions=tcqrn1
+set formatoptions=cro
 set go=a
 set hidden
 set hlsearch
+set ignorecase
 set incsearch
 set laststatus=2
 set linebreak
@@ -44,14 +47,13 @@ set mmp=5000
 set modelines=2
 set noerrorbells visualbell t_vb=
 set nohlsearch
-set noruler
 set noshiftround
 set nospell
 set nostartofline
 set pumheight=10
 set regexpengine=1
 set ruler
-set scrolloff=3
+set scrolloff=7
 set shortmess+=c
 set showcmd
 set showmatch
@@ -66,12 +68,22 @@ set ttimeoutlen=0
 set whichwrap=b,s,<,>
 set wildmenu
 set wildmode=longest,list,full
-set undodir=/tmp
-set undofile
 set virtualedit=block
+
+set noswapfile
+set nobackup
+set undofile
+set backupdir=$HOME/.local/tmp//,.
+set backupdir=$HOME/.local/tmp//,.
+set undodir=$HOME/.local/tmp//,.
+
+
+set nowritebackup
+set cmdheight=2
 
 "set tw=0
 "set wm=0
-"set numberwidth=1             " using only 1 column (and 1 space) while possible
+" using only 1 column (and 1 space) while possible
+"set numberwidth=1             
 "set nolazyredraw
 "set listchars=tab:>.,trail:.,precedes:<,extends:>
