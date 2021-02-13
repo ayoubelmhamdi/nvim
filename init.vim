@@ -1,4 +1,4 @@
-" init vim
+" init vim Ayoub
 
 let startvim = reltime()
 
