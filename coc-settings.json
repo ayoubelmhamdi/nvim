@@ -34,17 +34,18 @@
         "enumMember": "  ",
         "default": "  "
     },
-    "suggest.autoTrigger": "trigger",
+    //"suggest.timeout": 3000,
+    "suggest.enablePreview": true,
+    "suggest.maxPreviewWidth": 35,
+    "suggest.detailMaxLength": 100,
+    "suggest.detailField": "preview",
+    "suggest.removeDuplicateItems": true,
+    "suggest.snippetIndicator": " \ue796",
+    "suggest.autoTrigger": "always",
     "suggest.noselect": true,
     "suggest.preferCompleteThanJumpPlaceholder": true,
-    "suggest.snippetIndicator": " ",
     "suggest.languageSourcePriority": 99,
     // diagnostics
-    "diagnostic.errorSign": "\uf467",
-    "diagnostic.warningSign": "\uf071",
-    "diagnostic.infoSign": "\uf129",
-    "diagnostic.hintSign": "•",
-    "diagnostic.level": "hint",
     "diagnostic.refreshOnInsertMode": false,
     "diagnostic.virtualText": true,
     "diagnostic.errorSign": "\uf65b",
@@ -193,6 +194,7 @@
     },
     //LS
     "tsserver.formatOnType": true,
+    "tsserver.enable": true,
     // ..
     "languageserver": {
         "lua": {
@@ -200,10 +202,36 @@
             "filetypes": [
                 "lua"
             ]
+        },
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": [
+                "dockerfile"
+            ],
+            "args": [
+                "--stdio"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
         }
     },
     //coc-emoji
     "coc.source.emoji.filetypes": [
         "markdown"
+    ],
+    "browser.shortcut": "WEB",
+    "browser.filterLength": [
+        5,
+        20
     ]
 }

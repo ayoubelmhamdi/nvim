@@ -3,7 +3,6 @@ import sys
 favoriteContry: list = []
 filetxt = "file.txt"
 
-
 def saveContry():
     print("you are save your contry in :", filetxt)
     with open(filetxt, "a") as file:
