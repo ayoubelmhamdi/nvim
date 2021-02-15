@@ -1,43 +1,37 @@
-
-"\ 'coc-snippets',
 let g:coc_global_extensions = [
   \ 'coc-actions',
-  \ 'coc-sh',
-  \ 'coc-java-debug',
-  \ 'coc-java',
-  \ 'coc-lists',
-  \ 'coc-emmet',
-  \ 'coc-tasks',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-floaterm',
-  \ 'coc-fzf-preview',
-  \ 'coc-html',
   \ 'coc-css',
   \ 'coc-cssmodules',
-  \ 'coc-stylelintplus',
+  \ 'coc-diagnostic',
+  \ 'coc-emmet',
   \ 'coc-emoji',
-  \ 'coc-yaml',
-  \ 'coc-pyright',
-  \ 'coc-svg',
-  \ 'coc-prettier',
-  \ 'coc-vimlsp',
-  \ 'coc-xml',
-  \ 'coc-yank',
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-floaterm',
+  \ 'coc-fzf-preview',
+  \ 'coc-highlight',
+  \ 'coc-html',
+  \ 'coc-java',
+  \ 'coc-java-debug',
   \ 'coc-json',
+  \ 'coc-lists',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-prettier',
+  \ 'coc-pyright',
+  \ 'coc-sh',
+  \ 'coc-snippets',
+  \ 'coc-stylelintplus',
+  \ 'coc-svg',
+  \ 'coc-tabnine',
+  \ 'coc-tasks',
+  \ 'coc-tsserver',
+  \ 'coc-vimlsp',
   \ 'coc-vimtex',
-  \ 'coc-marketplace' 
+  \ 'coc-xml',
+  \ 'coc-yaml',
+  \ 'coc-yank',
   \ ]
-  " \ 'coc-tabnine',
-  " \ 'coc-highlight',
-
-  " \ 'coc-explorer'
-
-
-
-
-
-
 
 
 

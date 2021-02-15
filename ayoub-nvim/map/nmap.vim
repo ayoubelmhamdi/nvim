@@ -4,9 +4,13 @@ nnoremap <A-e> :!crf<Space>
 nnoremap <A-d> :!mkdir<Space>
 nnoremap <A-m> :!mv<Space>%<Space>
 
+" changment of v to v
+nnoremap v V
+nnoremap V v
 " Fix Y behaviour
 nmap Y y$
 " fix p
+" p="+p
 
 
 " Tab shortcuts
@@ -19,6 +23,34 @@ nnoremap <A-s> :%s//gI<Left><Left><Left>
 " _co is best than c i dont know why
 nnoremap c "_c
 
+" Prevent x from overriding what's in the clipboard.
+" use this tow symbole "_ after motion, 
+noremap x "_x
+noremap X "_X
+
+" Prevent selecting and pasting from overwriting what you originally copied.
+xnoremap p pgvy
+
+" Keep cursor at the bottom of the visual selection after you yank it.
+vmap y ygv<Esc>
+
+" TTT: changr indent original tab to
+    nnoremap > v>
+    nnoremap < v<
+    vnoremap > >gv
+    vnoremap < <gv
+
+
+
+
+
+
+
+" Make sure all types of requirements.txt files get syntax highlighting.
+autocmd BufNewFile,BufRead requirements*.txt set syntax=python
+
+" Ensure tabs don't get converted to spaces in Makefiles.
+autocmd FileType make setlocal noexpandtab
 " change j to gj and k to gk
 nnoremap j gj
 nnoremap k gk

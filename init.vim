@@ -10,6 +10,7 @@ let startvim = reltime()
   source $HOME/.config/nvim/ayoub-nvim/top.vim
   source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
   source $HOME/.config/nvim/ayoub-nvim/mycolor.vim
+  source $HOME/.config/nvim/confPlugin/sublime.vim
   "vim spell
   source $HOME/.config/nvim/confPlugin/spell.vim
 
@@ -35,7 +36,7 @@ let startvim = reltime()
   source $HOME/.config/nvim/confPlugin/coc/coc+snips.vim
   source $HOME/.config/nvim/confPlugin/coc/coc+snips.map.vim
   "syntastic
-  source $HOME/.config/nvim/confPlugin/syntastic.vim
+  " source $HOME/.config/nvim/confPlugin/syntastic.vim
   " syntastic map
   source $HOME/.config/nvim/confPlugin/syntastic.map.vim
   " Gramare
@@ -47,8 +48,6 @@ let startvim = reltime()
 
 
 
-  " bottom vim conf
-  source $HOME/.config/nvim/ayoub-nvim/bottom.vim
 
 " Source Disactive
 " source $HOME/.config/nvim/confPlugin/vimwiki.vim
@@ -86,6 +85,8 @@ source ~/.config/nvim/ayoub-nvim/leader/vleader.vim
 source ~/.config/nvim/ayoub-nvim/script/script1.vim
 
 
+  " bottom vim conf
+  source $HOME/.config/nvim/ayoub-nvim/bottom.vim
 
 
 

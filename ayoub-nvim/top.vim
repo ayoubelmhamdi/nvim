@@ -2,11 +2,13 @@
 let mapleader="\<Space>"
 let maplocalleader = ','
 
-
+" used for sublimme text plugin, but not work
+" execute pathogen#infect()
 syntax on
-filetype plugin on
+" comment because plugin siting usered 
+" filetype plugin on
 
-"automatique save/liad fold
+"automatique save/load fold
 augroup remember_folds
   autocmd!
   autocmd BufWinLeave * mkview

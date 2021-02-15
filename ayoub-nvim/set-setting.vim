@@ -30,11 +30,12 @@ set wildignore+=*.egg-info/**
 
 " by Alphabet
 set autoread
-set colorcolumn=500
+set colorcolumn=92
 set complete+=kspell
 set completeopt=menuone,longest
 set fileencoding=utf-8
 set formatoptions=cro
+set formatprg=prettier
 set go=a
 set hidden
 set hlsearch
@@ -62,7 +63,7 @@ set showtabline=2
 set smartcase
 set spelllang=en_us
 set textwidth=0
-set timeoutlen=300
+set timeoutlen=900
 set ttimeout
 set ttimeoutlen=0
 set whichwrap=b,s,<,>
@@ -71,14 +72,15 @@ set wildmode=longest,list,full
 set virtualedit=block
 
 set noswapfile
+set nowritebackup
 set nobackup
 set undofile
 set backupdir=$HOME/.local/tmp//,.
-set backupdir=$HOME/.local/tmp//,.
+set directory=$HOME/.local/tmp//,.
 set undodir=$HOME/.local/tmp//,.
 
 
-set nowritebackup
+"tow line for schow error
 set cmdheight=2
 
 "set tw=0

@@ -1,7 +1,11 @@
 snippet ist
 	import { createStore } from 'redux';
+endsnippet
+
 snippet con
 	connect(${1:mapStateToProps}, ${2:mapDispatchToProps})(<${3:VISUAL}/>);
+endsnippet
+
 snippet act
 	const ${1:actionName} = (${2:arg}) => {
 		return {
@@ -9,6 +13,8 @@ snippet act
 			$2
 		};
 	};
+endsnippet
+
 snippet rdc
 	const ${1:reducerName} = (state={}, action) => {
 		switch(action.type) {
@@ -21,12 +27,16 @@ snippet rdc
 				return state;
 		};
 	};
+endsnippet
+
 snippet mstp
 	const mapStateToProps = (state) => {
 		return {
 			${1:propName}: state.$1,
 		};
 	};
+endsnippet
+
 snippet mdtp
 	const mapDispatchToProps = (dispatch) => {
 		return {
@@ -35,3 +45,4 @@ snippet mdtp
 			},
 		};
 	};
+endsnippet

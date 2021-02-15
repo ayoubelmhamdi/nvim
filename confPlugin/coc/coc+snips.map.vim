@@ -70,14 +70,6 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 
 
-" TTT: changr indent original tab to
-    nnoremap > v>
-    nnoremap < v<
-    vnoremap > >gv
-    vnoremap < <gv
-
-
-
 
 
 " Use <C-l> for trigger snippet expand.
@@ -99,3 +91,13 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
 
+" Navigate the complete menu items like CTRL+n / CTRL+p would.
+inoremap <expr> <Down> pumvisible() ? "<C-n>" :"<Down>"
+inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
+
+" Select the complete menu item like CTRL+y would.
+inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
+inoremap <expr> <CR> pumvisible() ? "<C-y>" :"<CR>"
+
+" Cancel the complete menu item like CTRL+e would.
+inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"

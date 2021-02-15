@@ -13,6 +13,8 @@ call vundle#begin()
         Plugin 'morhetz/gruvbox'
         Plugin 'vim-airline/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
+        " as sublime-text
+        Plugin 'severin-lemaignan/vim-minimap'
         "fastfold
         " Plugin 'konfekt/fastfold'
 
