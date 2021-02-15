@@ -159,4 +159,8 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 
 
+let g:markdown_fenced_languages = [
+      \ 'vim',
+      \ 'help'
+      \]
 

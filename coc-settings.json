@@ -229,9 +229,11 @@
     "coc.source.emoji.filetypes": [
         "markdown"
     ],
-    "browser.shortcut": "WEB",
-    "browser.filterLength": [
-        5,
-        20
-    ]
+    "translator.engines": [
+        "google",
+        "bing",
+        "youdao",
+        "haici"
+    ],
+    "translator.toLang": "fr"
 }
