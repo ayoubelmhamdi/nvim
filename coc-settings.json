@@ -160,11 +160,11 @@
     "pyright.disableOrganizeImports": false,
     // snippets
     "snippets.ultisnips.directories": [
-        "snipShort",
-        "snipBig",
-        "snipPython"
+        "snipsShort",
+        "snipsBig",
+        "snipsPython"
     ],
-    "snippets.userSnippetsDirectory": "~/.config/nvim/snipsShort",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/snipsBig",
     // emmet
     "emmet.includeLanguages": {
         "vue-html": "html",
