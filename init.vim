@@ -36,7 +36,7 @@ let startvim = reltime()
   source $HOME/.config/nvim/confPlugin/coc/coc+snips.vim
   source $HOME/.config/nvim/confPlugin/coc/coc+snips.map.vim
   "syntastic
-  " source $HOME/.config/nvim/confPlugin/syntastic.vim
+  source $HOME/.config/nvim/confPlugin/syntastic.vim
   " syntastic map
   source $HOME/.config/nvim/confPlugin/syntastic.map.vim
   " Gramare
