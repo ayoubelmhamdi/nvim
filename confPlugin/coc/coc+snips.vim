@@ -92,12 +92,12 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 xmap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
+" xmap ac <Plug>(coc-classobj-a)
 
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 omap ic <Plug>(coc-classobj-i)
-omap ac <Plug>(coc-classobj-a)
+" omap ac <Plug>(coc-classobj-a)
 
 "for look my C-O-C maping 
 "looking in $HOME/.config/nvim/confPlugin/coc/coc+snips.map.vim

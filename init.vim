@@ -5,7 +5,7 @@ let startvim = reltime()
 
 " Source Active
   " vundel plugins
-  source $HOME/.config/nvim/Plugin/plugins.vim
+  source $HOME/.config/nvim/confPlugin/plugins.vim
   " vim set + theme
   source $HOME/.config/nvim/ayoub-nvim/top.vim
   source $HOME/.config/nvim/ayoub-nvim/set-setting.vim
@@ -21,8 +21,6 @@ let startvim = reltime()
   source $HOME/.config/nvim/confPlugin/fzf.vim
   " "fast fold
   " source $HOME/.config/nvim/confPlugin/fastfold.vim
-  "which key
-  source $HOME/.config/nvim/confPlugin/which-key.vim
 
   " Programation
   " js
@@ -85,6 +83,8 @@ source ~/.config/nvim/ayoub-nvim/leader/vleader.vim
 source ~/.config/nvim/ayoub-nvim/script/script1.vim
 
 
+  "which key
+  source $HOME/.config/nvim/confPlugin/which-key.vim
   " bottom vim conf
   source $HOME/.config/nvim/ayoub-nvim/bottom.vim
 
