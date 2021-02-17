@@ -3,7 +3,6 @@
 
 
 
-nnoremap <Leader>g gqap
 nnoremap <leader>w :w<CR>:source $MYVIMRC<CR><Esc>:AirlineRefresh<cr><C-c><Esc>
 nnoremap <leader>q :q!
 nnoremap <leader>wq :wq!
@@ -20,5 +19,6 @@ nnoremap <leader>v :tabnew<cr>:edit $HOME/.config/nvim/ayoub-nvim/set-setting.vi
 nnoremap <leader>vi :tabnew<cr>:edit $HOME/.config/nvim/init.vim<CR>
 nnoremap <leader>vp :tabnew<cr>:edit $HOME/.config/nvim/Plugin/plugins.vim<CR>
 "Format paragraph (selected or not) to 80 character lines.
-xnoremap <Leader>g gqa
+xnoremap <Leader>G gqa
+nnoremap <Leader>G gqap
 
