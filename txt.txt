@@ -1,0 +1,7 @@
+[coc.nvim] Error on execute python script: request error nvim_command - Vim(return):Error invoki
+ng 'python_execute_file' on channel 8 (python3-script-host):
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/tmp/nvimR60snn/coc.nvim-24463/coc-ultisnips-22Elb8FFpO.p
+y", line 286, in <module>
+    from vimsnippets import foldmarker, make_box, get_comment_format
+ModuleNotFoundError: No module named 'vimsnippets'

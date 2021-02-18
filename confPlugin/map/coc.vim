@@ -60,10 +60,10 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/own-snips']
 
-" ultisnip move
-    let g:UltiSnipsExpandTrigger="<c-h>"
-    let g:UltiSnipsJumpForwardTrigger="<c-h>"
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" " ultisnip move
+"     let g:UltiSnipsExpandTrigger="<c-h>"
+"     let g:UltiSnipsJumpForwardTrigger="<c-h>"
+"     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
 

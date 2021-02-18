@@ -70,11 +70,11 @@ call plug#begin('~/.vim/vendor')
 	Plug 'mbbill/undotree'
 		"snip
 		" Engien snipppets + snipmate
-	Plug 'SirVer/ultisnips'
+	" Plug 'SirVer/ultisnips'
 		" big  snippets exemple commit for 
 		" edit by my self
 	Plug 'honza/vim-snippets'
-		"ale
+	"ale
 	" Plug 'dense-analysis/ale'
 		" yocompleme
 	" Plug 'valloric/youcompleteme'

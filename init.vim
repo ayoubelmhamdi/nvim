@@ -29,18 +29,16 @@ let startvim = reltime()
   " Programation
   " js
   source $HOME/.config/nvim/confPlugin/javascript.vim
-  " js map
-  source $HOME/.config/nvim/confPlugin/javascript.map.vim
+  source $HOME/.config/nvim/confPlugin/map/javascript.vim
 
   "IDE VIM
-  " coc + ultiSnips
-  source $HOME/.config/nvim/confPlugin/coc/extensions.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc+snips.vim
-  source $HOME/.config/nvim/confPlugin/coc/coc+snips.map.vim
+  " coc 
+  " source $HOME/.config/nvim/confPlugin/coc/extensions.vim
+  source $HOME/.config/nvim/confPlugin/coc/coc.vim
+  source $HOME/.config/nvim/confPlugin/map/coc.vim
   "syntastic
   source $HOME/.config/nvim/confPlugin/syntastic.vim
-  " syntastic map
-  source $HOME/.config/nvim/confPlugin/syntastic.map.vim
+  source $HOME/.config/nvim/confPlugin/map/syntastic.vim
         " surround
   source $HOME/.config/nvim/confPlugin/surround.vim
   " Gramare

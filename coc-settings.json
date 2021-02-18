@@ -42,7 +42,8 @@
     "suggest.removeDuplicateItems": true,
     "suggest.snippetIndicator": " \ue796",
     "suggest.autoTrigger": "always",
-    "suggest.noselect": true,
+    "suggest.numberSelect": true,
+    "suggest.noselect": false,
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.languageSourcePriority": 99,
     // diagnostics
