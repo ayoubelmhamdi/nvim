@@ -15,8 +15,12 @@ let startvim = reltime()
   source $HOME/.config/nvim/confPlugin/spell.vim
 
   " Plugin
+  " incsearch
+  source $HOME/.config/nvim/confPlugin/incsearch.vim
+  " esay motion
+  source $HOME/.config/nvim/confPlugin/easyMotion.vim
   "sneak
-  source $HOME/.config/nvim/confPlugin/sneak.vim
+  " source $HOME/.config/nvim/confPlugin/sneak.vim
   " fzf
   source $HOME/.config/nvim/confPlugin/fzf.vim
   " "fast fold
@@ -37,6 +41,8 @@ let startvim = reltime()
   source $HOME/.config/nvim/confPlugin/syntastic.vim
   " syntastic map
   source $HOME/.config/nvim/confPlugin/syntastic.map.vim
+        " surround
+  source $HOME/.config/nvim/confPlugin/surround.vim
   " Gramare
   " source $HOME/.config/nvim/confPlugin/gramar.vim
   " source $HOME/.config/nvim/confPlugin/gramar.map.vim

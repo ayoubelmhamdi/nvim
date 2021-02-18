@@ -5,13 +5,12 @@ nnoremap <A-d> :!mkdir<Space>
 nnoremap <A-m> :!mv<Space>%<Space>
 
 " changment of v to v
-nnoremap v V
-nnoremap V v
+" nnoremap v V
+" nnoremap V v
 " Fix Y behaviour
 nmap Y y$
 " fix p
 " p="+p
-
 
 " Tab shortcuts
 nnoremap <A-p> :tabp<CR>
@@ -21,7 +20,7 @@ nnoremap <A-n> :tabn<CR>
 nnoremap <A-s> :%s//gI<Left><Left><Left>
 
 " _co is best than c i dont know why
-nnoremap c "_c
+" nnoremap c "_c
 
 " Prevent x from overriding what's in the clipboard.
 " use this tow symbole "_ after motion, 
@@ -42,7 +41,7 @@ vmap y ygv<Esc>
 
 
 
-
+"   "test"
 
 
 
@@ -52,8 +51,8 @@ autocmd BufNewFile,BufRead requirements*.txt set syntax=python
 " Ensure tabs don't get converted to spaces in Makefiles.
 autocmd FileType make setlocal noexpandtab
 " change j to gj and k to gk
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 
 
 " dd = dd+1

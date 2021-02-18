@@ -3,9 +3,6 @@
 	"𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
 call plug#begin('~/.vim/vendor')
 
-        " Perhapes for repet new motion from plugin
-	Plug 'easymotion/vim-easymotion'
-
 	"𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
     "𐂮      themes      𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
 	"𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
@@ -27,8 +24,12 @@ call plug#begin('~/.vim/vendor')
 	"𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
 		"which key
 	Plug 'liuchengxu/vim-which-key'
+		" incsearch search
+    Plug 'haya14busa/incsearch.vim'
+		" easy motion search
+    Plug 'easymotion/vim-easymotion'
 		"snaek search
-	Plug 'justinmk/vim-sneak'
+	" Plug 'justinmk/vim-sneak'
 		"fzf
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'

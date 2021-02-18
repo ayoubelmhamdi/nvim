@@ -14,10 +14,10 @@ noremap <localleader>s :setlocal spell!<CR>
 
 " Clcar search highlights.
 "map <Leader><Space> :let @/=''<CR>
-nnoremap <leader>n :tabnew<cr>:e<Space>
-nnoremap <leader>v :tabnew<cr>:edit $HOME/.config/nvim/ayoub-nvim/set-setting.vim<CR>
-nnoremap <leader>vi :tabnew<cr>:edit $HOME/.config/nvim/init.vim<CR>
-nnoremap <leader>vp :tabnew<cr>:edit $HOME/.config/nvim/Plugin/plugins.vim<CR>
+nnoremap <leader>n :tabnew!<cr>:e<Space>
+nnoremap <leader>v :tabnew!<cr>:e $HOME/.config/nvim/ayoub-nvim/set-setting.vim<CR>
+nnoremap <leader>vi :tabnew!<cr><Esc>:e! $HOME/.config/nvim/init.vim<CR>
+nnoremap <leader>vp :tabnew!<cr>:e $HOME/.config/nvim/confPlugin/plugins.vim<CR>
 "Format paragraph (selected or not) to 80 character lines.
 xnoremap <Leader>G gqa
 nnoremap <Leader>G gqap
