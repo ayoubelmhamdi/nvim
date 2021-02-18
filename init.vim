@@ -48,7 +48,8 @@ let startvim = reltime()
   " source $HOME/.config/nvim/confPlugin/yocompleteme.vim
   " source $HOME/.config/nvim/confPlugin/yocompleteme-map.vim
 
-
+  " add thermiball by scripte vim
+  source $HOME/.config/nvim/confPlugin/terminal.vim
 
 
 " Source Disactive
