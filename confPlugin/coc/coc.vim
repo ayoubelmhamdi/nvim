@@ -73,7 +73,7 @@ endif
 
 
 
-" adding
+" adding this line for completion put in fisrt line
 if exists('*complete_info')
   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 else

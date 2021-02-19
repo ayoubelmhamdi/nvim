@@ -1,6 +1,40 @@
+"
+function! P5js()
+" remove duplique not work yet 
+" %s/^\(.*\)\(\n\1\)\+$/\1/
+" worked by cmd
+" sort file | uniq
+"
+" history
+" clean non sed command
+" :v/^[v,g,%]/d
+ " add breakline
+ %s/[^source.js]":{"/":{\r"/g
+ %s/","/",\r"/g
+ " %g/^"descriptionMore/s/},/\rendsnippet/
+ " %g/^"rightLabelHTML/d
+ " %g/^"leftLabel/d
+ " %g/^"prefix/d
+ " %g/^"description/d
+
+endfunction
+
+
+
+
+
+
+
+function! Breakline()
+    %s/a\n/b\r/g
+endfunction
+
+
+
 function! Ayoub(name)
    put='\"'.a:name 
 endfunction
+
 
 
 function! SortMaster1()

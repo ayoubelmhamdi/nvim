@@ -1,0 +1,21 @@
+g/$\n^[0-9]/join
+g/\a$\n^}/join
+g/\a$\n^\a/join
+g/\a$\n^[a-z]/join
+g/[a-z]$\n^[a-z]/join
+%g/ *"[r,l,p,d].*,$/d
+%g/ *"[r,l,p,d].*$/d
+%g/ *"[r,l,p,d].*"$/d
+%g/ *"[r,l,p,d].*[",\,]$/d
+%s/ *"body.*
+g/ *"body/s/,$//
+g/ *".*{/
+g/ *".*{/s/ *"/snippet/
+g/ *".*{/s/ *"/snippet /
+g/snippet/s/": {$//
+g/ *},$/*/endsnippet/
+g/ *},$/.*/endsnippet/
+g/ *},$/s//endsnippet/
+
+
+
