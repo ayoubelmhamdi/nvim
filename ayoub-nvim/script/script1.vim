@@ -9,16 +9,22 @@ function! P5js()
 " clean non sed command
 " :v/^[v,g,%]/d
  " add breakline
- %s/[^source.js]":{"/":{\r"/g
+ %s/[^source.js]":{"/)":{\r"/
+ %s/":{"/":{\r"/g
  %s/","/",\r"/g
- " %g/^"descriptionMore/s/},/\rendsnippet/
- " %g/^"rightLabelHTML/d
- " %g/^"leftLabel/d
- " %g/^"prefix/d
- " %g/^"description/d
+ %g/^"descriptionMore/s/},/\rendsnippet\r\r/
+ %g/^"rightLabelHTML/d
+ %g/^"leftLabel/d
+ %g/^"prefix/d
+ %g/^"description/d
+ %g/^"body":/s/",$/;/
+ %s/^"body":"/\t/
+ %g/^"\a.*":{/s/^"/snippet /
+ %g/^snippet /s/":{$//
 
 endfunction
-
+"body":"alpha(${1:color})$2",
+"WaveShaperNode":{
 
 
 
