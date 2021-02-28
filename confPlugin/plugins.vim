@@ -74,6 +74,8 @@ call plug#begin('~/.vim/vendor')
 		" big  snippets exemple commit for 
 		" edit by my self
 	Plug 'honza/vim-snippets'
+        "codota"
+    " Plug 'codota/tabnine-vim'
 	"ale
 	" Plug 'dense-analysis/ale'
 		" yocompleme
