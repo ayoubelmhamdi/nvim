@@ -4,7 +4,7 @@ let startvim = reltime()
 
 
 " Source Active
-  " vundel plugins
+  " Plug plugins
   source $HOME/.config/nvim/confPlugin/plugins.vim
   " vim set + theme
   source $HOME/.config/nvim/ayoub-nvim/top.vim
