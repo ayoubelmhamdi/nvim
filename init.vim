@@ -33,7 +33,7 @@ let startvim = reltime()
 
   "IDE VIM
   " coc 
-  " source $HOME/.config/nvim/confPlugin/coc/extensions.vim
+  source $HOME/.config/nvim/confPlugin/coc/extensions.vim
   source $HOME/.config/nvim/confPlugin/coc/coc.vim
   source $HOME/.config/nvim/confPlugin/map/coc.vim
   "syntastic

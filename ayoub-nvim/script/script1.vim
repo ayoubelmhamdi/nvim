@@ -1,4 +1,5 @@
-"
+" this function for extract snippet
+" from vscode to coc snippet/ultisnip
 function! P5js()
 " remove duplique not work yet 
 " %s/^\(.*\)\(\n\1\)\+$/\1/
@@ -23,12 +24,6 @@ function! P5js()
  %g/^snippet /s/":{$//
 
 endfunction
-"body":"alpha(${1:color})$2",
-"WaveShaperNode":{
-
-
-
-
 
 
 function! Breakline()
