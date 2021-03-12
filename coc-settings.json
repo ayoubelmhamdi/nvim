@@ -152,10 +152,13 @@
     "pyright.disableLanguageServices": false,
     "pyright.disableOrganizeImports": false,
     //    //java
+    // codelens
+    "codeLens.enable": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar",
     //    "java.referencesCodeLens.enabled": true,
     //    "java.implementationsCodeLens.enabled": true,
     //    "java.completion.enabled": true,
-    //    "java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar -Xbootclasspath/a:$HOME/.config/nvim/utils/lombok.jar",
     //    "java.import.maven.enabled": true,
     //    "java.completion.overwrite": false,
     //    "java.format.onType.enabled": true,
@@ -166,13 +169,7 @@
     //    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     //    "java.maven.downloadSources": true,
     //    "java.enabled": true,
-    //    "java.configuration.runtimes": [
-    //        {
-    //            "name": "JavaSE-14",
-    //            "path": "$PREFIX/jdk",
-    //            "default": true
-    //        }
-    //    ],
+    //
     // snippets
     "snippets.ultisnips.directories": [
         "snipsShort",
