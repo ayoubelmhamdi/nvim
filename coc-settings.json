@@ -100,16 +100,11 @@
     "eslint.packageManager": "yarn",
     "eslint.run": "onType",
     //prettier
+    "prettier.statusItemText": "★ ",
     "prettier.disableSuccessMessage": true,
     "prettier.eslintIntegration": true,
     "prettier.formatterPriority": -1,
     "prettier.singleQuote": true,
-    // codelens
-    "codeLens.enable": true,
-    "java.referencesCodeLens.enabled": true,
-    "java.implementationsCodeLens.enabled": true,
-    "java.completion.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
     // list
     "list.indicator": ">",
     "list.selectedSignText": " ",
@@ -156,6 +151,28 @@
     "pyright.disableCompletion": false,
     "pyright.disableLanguageServices": false,
     "pyright.disableOrganizeImports": false,
+    //    //java
+    //    "java.referencesCodeLens.enabled": true,
+    //    "java.implementationsCodeLens.enabled": true,
+    //    "java.completion.enabled": true,
+    //    "java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar -Xbootclasspath/a:$HOME/.config/nvim/utils/lombok.jar",
+    //    "java.import.maven.enabled": true,
+    //    "java.completion.overwrite": false,
+    //    "java.format.onType.enabled": true,
+    //    "java.completion.guessMethodArguments": true,
+    //    "java.codeGeneration.useBlocks": true,
+    //    "java.errors.incompleteClasspath.severity": "ignore",
+    //    "java.signatureHelp.enabled": true,
+    //    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    //    "java.maven.downloadSources": true,
+    //    "java.enabled": true,
+    //    "java.configuration.runtimes": [
+    //        {
+    //            "name": "JavaSE-14",
+    //            "path": "$PREFIX/jdk",
+    //            "default": true
+    //        }
+    //    ],
     // snippets
     "snippets.ultisnips.directories": [
         "snipsShort",
