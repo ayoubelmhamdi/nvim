@@ -19,7 +19,7 @@ python2 -m pip install --user --upgrade pynvim
 python3 -m pip install --user --upgrade pynvim
 ```
 
-````
+```
 mkdir -p $HOME/.local/tmp/
 mkdir -p $HOME/.config/nvim/
 ```
