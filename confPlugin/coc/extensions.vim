@@ -17,7 +17,6 @@ let g:coc_global_extensions = [
   \ 'coc-sh',
   \ 'coc-snippets',
   \ 'coc-stylelintplus',
-  \ 'coc-tabnine',
   \ 'coc-tasks',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
@@ -27,6 +26,7 @@ let g:coc_global_extensions = [
 
 
   " \ 'coc-yaml',
+  " \ 'coc-tabnine',
   " \ 'coc-vimtex',
   " \ 'coc-css',
   " \ 'coc-cssmodules',

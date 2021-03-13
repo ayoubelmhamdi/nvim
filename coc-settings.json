@@ -154,8 +154,13 @@
     //    //java
     // codelens
     "codeLens.enable": true,
+    "java.home": "/usr/lib/jvm/java-15-openjdk",
     "java.referencesCodeLens.enabled": true,
     "java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar",
+    "java.enabled": true,
+    //
+    //
+    //
     //    "java.referencesCodeLens.enabled": true,
     //    "java.implementationsCodeLens.enabled": true,
     //    "java.completion.enabled": true,
@@ -168,7 +173,6 @@
     //    "java.signatureHelp.enabled": true,
     //    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     //    "java.maven.downloadSources": true,
-    //    "java.enabled": true,
     //
     // snippets
     "snippets.ultisnips.directories": [
@@ -185,10 +189,10 @@
     "emmet.showAbbreviationSuggestions": true,
     "emmet.showSuggestionsAsSnippets": true,
     // CSS (disable since I'm also using stylelintplus)
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false,
-    "wxss.validate": false,
+    // "css.validate": false,
+    // "less.validate": false,
+    // "scss.validate": false,
+    // "wxss.validate": false,
     // explorer
     "explorer.width": 30,
     "explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
@@ -231,21 +235,40 @@
             ],
             "filetypes": [
                 "sh"
-            ],
-            "ignoredRootPaths": [
-                "~"
             ]
+        },
+        "ccls": {
+            "command": "ccls",
+            "filetypes": [
+                "c",
+                "cpp",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                ".ccls",
+                "compile_commands.json",
+                ".vim/",
+                ".git/",
+                ".hg/"
+            ],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
         }
     },
     //coc-emoji
     "coc.source.emoji.filetypes": [
         "markdown"
     ],
-    "translator.engines": [
-        "google",
-        "bing",
-        "youdao",
-        "haici"
-    ],
-    "translator.toLang": "fr"
+    //    "translator.engines": [
+    //        "google",
+    //        "bing",
+    //        "youdao",
+    //        "haici"
+    //    ],
+    //    "translator.toLang": "fr",
+    "java.errors.incompleteClasspath.severity": "ignore"
 }
