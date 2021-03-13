@@ -1,12 +1,12 @@
 # PRERQUIRE
 ```
 # Arch
-sudo pacman -Sy nodejs python2 python3 npm
+sudo pacman -Sy nodejs npm python2 python  python-pip python2-pip
 # termux
-apt nodejs python2 python3 npm
+apt install nodejs npm python2 python 
 # Ubuntu
 PPA GROUVY
-sudo apt install nodejs python2 python3 npm
+sudo apt install nodejs npm python2 python 
 # Debian
 PPA GROUVY
 sudo apt install nodejs python2 python3 npm
@@ -17,6 +17,7 @@ sudo xbps-install -Sy nodejs python2 python3 npm
 ```
 python2 -m pip install --user --upgrade pynvim
 python3 -m pip install --user --upgrade pynvim
+npm install -g neovim
 ```
 
 ```
