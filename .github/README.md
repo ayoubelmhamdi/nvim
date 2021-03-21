@@ -1,13 +1,21 @@
 # PRERQUIRE
-```
+
 # Arch
+```
 sudo pacman -Sy nodejs npm python2 python  python-pip python2-pip
-# termux
+```
+## termux
+```
 apt install nodejs python python2
-# Ubuntu
+```
+## Ubuntu  
 PPA GROUVY
+```
 sudo apt install nodejs npm python2 python 
-# Debian
+```
+## Debian
+```
+```
 PPA GROUVY
 sudo apt install nodejs python2 python3 npm
 # Void
