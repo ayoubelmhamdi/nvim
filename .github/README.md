@@ -6,7 +6,7 @@ sudo pacman -Sy nodejs npm python2 python  python-pip python2-pip
 ```
 ## Termux
 ```
-apt install nodejs python python2
+apt install neovim nodejs python python2
 ```
 ## Ubuntu  
 PPA GROUVY
@@ -33,7 +33,11 @@ npm install -g neovim
 mkdir -p $HOME/.local/tmp/
 mkdir -p $HOME/.config/nvim/
 ```
-
+## PLUG MANAGER
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
 ### SSH
 ```
 git clone                                      \
