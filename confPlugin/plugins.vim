@@ -36,6 +36,7 @@ call plug#begin('~/.vim/vendor')
 		"fzf
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
+    Plug 'wookayin/fzf-ripgrep.vim'
 	Plug 'antoinemadec/coc-fzf'
 	Plug 'airblade/vim-rooter'
 
@@ -60,7 +61,10 @@ call plug#begin('~/.vim/vendor')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		" Gui debugin
 	Plug 'puremourning/vimspector'
-	Plug 'scrooloose/syntastic'
+	" Plug 'scrooloose/syntastic'
+    " highlight for java
+    Plug 'uiiaoo/java-syntax.vim'
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 		" grammare
 	Plug 'rhysd/vim-grammarous'
 		"commentary
@@ -89,7 +93,7 @@ call plug#begin('~/.vim/vendor')
     "𐂮          Git       𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
 	"𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮𐂮
 		" fu-git-ive
-	Plug 'tpope/vim-fugitive'
+	" Plug 'tpope/vim-fugitive'
 		" vim rooter :
     " Plug 'deja/add' :deja adding in top ^_^
         

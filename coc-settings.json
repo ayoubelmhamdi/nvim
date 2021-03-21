@@ -39,9 +39,8 @@
     "suggest.removeDuplicateItems": false,
     "suggest.snippetIndicator": "",
     "suggest.autoTrigger": "always",
-    "suggest.numberSelect": true,
-    "suggest.noselect": false,
-    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.numberSelect": false,
+    "suggest.noselect": true,
     "suggest.languageSourcePriority": 99,
     // diagnostics
     "diagnostic.refreshOnInsertMode": false,
@@ -154,10 +153,11 @@
     //    //java
     // codelens
     "codeLens.enable": true,
-    "java.home": "/usr/lib/jvm/java-15-openjdk",
     "java.referencesCodeLens.enabled": true,
-    "java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar",
     "java.enabled": true,
+    //""java.jdt.ls.vmargs": "-noverify -Xmx6G -XX:+UseG1GC -XX:+UseStringDeduplication",
+    //"java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar -Xbootclasspath/a:/usr/local/share/lombok.jar",
+    //"java.home": "/usr/lib/jvm/java-15-openjdk",
     //
     //
     //

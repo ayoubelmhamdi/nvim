@@ -44,8 +44,8 @@ let startvim = reltime()
   " vimspector
   " source $HOME/.config/nvim/confPlugin/vimspector.vim
   "syntastic
-  source $HOME/.config/nvim/confPlugin/syntastic.vim
-  source $HOME/.config/nvim/confPlugin/map/syntastic.vim
+  " source $HOME/.config/nvim/confPlugin/syntastic.vim
+  " source $HOME/.config/nvim/confPlugin/map/syntastic.vim
         " surround
   source $HOME/.config/nvim/confPlugin/surround.vim
   " Gramare
