@@ -4,7 +4,7 @@
 ```
 sudo pacman -Sy nodejs npm python2 python  python-pip python2-pip
 ```
-## termux
+## Termux
 ```
 apt install nodejs python python2
 ```
@@ -15,13 +15,14 @@ sudo apt install nodejs npm python2 python
 ```
 ## Debian
 ```
-```
 PPA GROUVY
 sudo apt install nodejs python2 python3 npm
+```
 # Void
+```
 sudo xbps-install -Sy nodejs python2 python3 npm
 ```
-
+# PROVIDER
 ```
 python2 -m pip install --user --upgrade pynvim
 python3 -m pip install --user --upgrade pynvim
