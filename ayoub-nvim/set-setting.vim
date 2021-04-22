@@ -88,10 +88,13 @@ set undodir=$HOME/.local/tmp//,.
 
 "tow line for schow error
 set cmdheight=2
+" set endofline
+set list
+set listchars=tab:>-,eol:¶
 
-"set tw=0
-"set wm=0
+" set tw=0
+" set wm=0
 " using only 1 column (and 1 space) while possible
-"set numberwidth=1             
-"set nolazyredraw
-"set listchars=tab:>.,trail:.,precedes:<,extends:>
+" set numberwidth=1
+" set nolazyredraw
+" set listchars=tab:>.,trail:.,precedes:<,extends:>
