@@ -1,274 +1,272 @@
 {
-    //priority
-    "snippets.priority": 1,
-    "yank.priority": 3,
-    "coc.source.file.priority": 4,
-    "coc.source.around.priority": 5,
-    "coc.source.buffer.priority": 6,
-    // suggestions
-    "suggest.completionItemKindLabels": {
-        "variable": "\uf71b",
-        "constant": "\uf8ff",
-        "struct": "\ufb44",
-        "class": "\uf0e8",
-        "interface": "\ufa52",
-        "text": "\ue612",
-        "enum": "\uf435",
-        "enumMember": "\uf02b",
-        "color": "\ue22b",
-        "property": "\ufab6",
-        "field": "\uf93d",
-        "unit": "\uf475",
-        "file": "\uf471",
-        "value": "\uf8a3",
-        "event": "\ufacd",
-        "folder": "\uf115",
-        "keyword": "\uf893",
-        "snippet": "\uf64d",
-        "operator": "\uf915",
-        "reference": "\uf87a",
-        "typeParameter": "\uf278",
-        "default": "\uf29c"
-    },
-    //suggest
-    "suggest.timeout": 500,
-    "suggest.enablePreview": true,
-    "suggest.maxPreviewWidth": 35,
-    "suggest.detailMaxLength": 100,
-    "suggest.detailField": "preview",
-    "suggest.removeDuplicateItems": false,
-    "suggest.snippetIndicator": "",
-    "suggest.autoTrigger": "always",
-    "suggest.numberSelect": false,
-    "suggest.noselect": true,
-    "suggest.languageSourcePriority": 99,
-    // diagnostics
-    "diagnostic.refreshOnInsertMode": false,
-    "diagnostic.virtualText": true,
-    "diagnostic.errorSign": "\uf65b",
-    "diagnostic.warningSign": "\uf421",
-    "diagnostic.infoSign": "ℹ",
-    "diagnostic.hintSign": "➤",
-    "diagnostic-languageserver.filetypes": {
-        "html": "tidy",
-        "sh": "shellcheck",
-        "css": "stylelint",
-        "email": "languagetool",
-        "markdown": [
-            "write-good",
-            "markdownlint"
-        ],
-        "sh": "shellcheck",
-        "elixir": [
-            "mix_credo",
-            "mix_credo_compile"
-        ],
-        "eelixir": [
-            "mix_credo",
-            "mix_credo_compile"
-        ],
-        "php": [
-            "phpstan",
-            "psalm"
-        ]
-    },
-    "diagnostic-languageserver.formatFiletypes": {
-        "dart": "dartfmt",
-        "elixir": "mix_format",
-        "eelixir": "mix_format",
-        "python": [
-            "black",
-            "isort"
-        ],
-        "lua": "lua-format",
-        "sh": "shfmt",
-        "blade": "blade-formatter"
-    },
-    // eslint for js aide ypur code
-    "eslint.autoFixOnSave": true,
-    "eslint.filetypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact"
+  //priority
+  "snippets.priority": 1,
+  "yank.priority": 3,
+  "coc.source.file.priority": 4,
+  "coc.source.around.priority": 5,
+  "coc.source.buffer.priority": 6,
+  // suggestions
+  "suggest.completionItemKindLabels": {
+    "variable": "\uf71b",
+    "constant": "\uf8ff",
+    "struct": "\ufb44",
+    "class": "\uf0e8",
+    "interface": "\ufa52",
+    "text": "\ue612",
+    "enum": "\uf435",
+    "enumMember": "\uf02b",
+    "color": "\ue22b",
+    "property": "\ufab6",
+    "field": "\uf93d",
+    "unit": "\uf475",
+    "file": "\uf471",
+    "value": "\uf8a3",
+    "event": "\ufacd",
+    "folder": "\uf115",
+    "keyword": "\uf893",
+    "snippet": "\uf64d",
+    "operator": "\uf915",
+    "reference": "\uf87a",
+    "typeParameter": "\uf278",
+    "default": "\uf29c"
+  },
+  //suggest
+  "suggest.timeout": 500,
+  "suggest.enablePreview": true,
+  "suggest.maxPreviewWidth": 35,
+  "suggest.detailMaxLength": 100,
+  "suggest.detailField": "preview",
+  "suggest.removeDuplicateItems": false,
+  "suggest.snippetIndicator": "",
+  "suggest.autoTrigger": "always",
+  "suggest.numberSelect": false,
+  "suggest.noselect": true,
+  "suggest.languageSourcePriority": 99,
+  // diagnostics
+  "diagnostic.refreshOnInsertMode": false,
+  "diagnostic.virtualText": true,
+  "diagnostic.errorSign": "\uf65b",
+  "diagnostic.warningSign": "\uf421",
+  "diagnostic.infoSign": "ℹ",
+  "diagnostic.hintSign": "➤",
+  "diagnostic-languageserver.filetypes": {
+    "html": "tidy",
+    "css": "stylelint",
+    "email": "languagetool",
+    "markdown": [
+      "write-good",
+      "markdownlint"
     ],
-    "eslint.nodePath": ".yarn/sdks",
-    "eslint.options": {
-        "configFile": ".eslintrc.js"
-    },
-    "eslint.packageManager": "yarn",
-    "eslint.run": "onType",
-    //prettier
-    "prettier.statusItemText": "★ ",
-    "prettier.disableSuccessMessage": true,
-    "prettier.eslintIntegration": true,
-    "prettier.formatterPriority": -1,
-    "prettier.singleQuote": true,
-    // list
-    "list.indicator": ">",
-    "list.selectedSignText": " ",
-    // autoformat
-    "coc.preferences.formatOnSaveFiletypes": [
-        "css",
-        "markdown",
-        "javascript",
-        "graphql",
-        "html",
-        "yaml",
-        "json",
-        "python",
-        "java"
+    "sh": "shellcheck",
+    "elixir": [
+      "mix_credo",
+      "mix_credo_compile"
     ],
-    "coc.preferences.hoverTarget": "float",
-    // python config
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.autoSearchPaths": true,
-    "python.analysis.diagnosticMode": "openFilesOnly",
-    "python.analysis.stubPath": "typings",
-    "python.analysis.typeshedPaths": [],
-    "python.analysis.diagnosticSeverityOverrides": {},
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.useLibraryCodeForTypes": true,
-    "python.pythonPath": "python",
-    "python.venvPath": "",
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "black",
-    "python.formatting.blackArgs": [],
-    "python.formatting.autopep8Path": "autopep8",
-    "python.formatting.autopep8Args": [],
-    "python.formatting.yapfPath": "yapf",
-    "python.formatting.yapfArgs": [],
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.banditEnabled": false,
-    "python.linting.mypyEnabled": false,
-    "python.linting.pytypeEnabled": false,
-    "python.linting.prospectorEnabled": false,
-    "python.linting.pydocstyleEnabled": false,
-    "python.linting.pylamaEnabled": false,
-    "python.linting.pylintEnabled": false,
-    "pyright.disableCompletion": false,
-    "pyright.disableLanguageServices": false,
-    "pyright.disableOrganizeImports": false,
-    //    //java
-    // codelens
-    "codeLens.enable": true,
-    "java.referencesCodeLens.enabled": true,
-    "java.enabled": true,
-    //""java.jdt.ls.vmargs": "-noverify -Xmx6G -XX:+UseG1GC -XX:+UseStringDeduplication",
-    //"java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar -Xbootclasspath/a:/usr/local/share/lombok.jar",
-    //"java.home": "/usr/lib/jvm/java-15-openjdk",
-    //
-    //
-    //
-    //    "java.referencesCodeLens.enabled": true,
-    //    "java.implementationsCodeLens.enabled": true,
-    //    "java.completion.enabled": true,
-    //    "java.import.maven.enabled": true,
-    //    "java.completion.overwrite": false,
-    //    "java.format.onType.enabled": true,
-    //    "java.completion.guessMethodArguments": true,
-    //    "java.codeGeneration.useBlocks": true,
-    //    "java.errors.incompleteClasspath.severity": "ignore",
-    //    "java.signatureHelp.enabled": true,
-    //    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-    //    "java.maven.downloadSources": true,
-    //
-    // snippets
-    "snippets.ultisnips.directories": [
-        "snipsShort",
-        "snipsBig",
-        "snipsPython"
+    "eelixir": [
+      "mix_credo",
+      "mix_credo_compile"
     ],
-    "snippets.userSnippetsDirectory": "~/.config/nvim/snipsBig",
-    // emmet
-    "emmet.includeLanguages": {
-        "vue-html": "html",
-        "javascript": "javascriptreact"
+    "php": [
+      "phpstan",
+      "psalm"
+    ]
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "dart": "dartfmt",
+    "elixir": "mix_format",
+    "eelixir": "mix_format",
+    "python": [
+      "black",
+      "isort"
+    ],
+    "lua": "lua-format",
+    "blade": "blade-formatter"
+  },
+  // eslint for js aide ypur code
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.nodePath": ".yarn/sdks",
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onType",
+  //prettier
+  "prettier.statusItemText": "★ ",
+  "prettier.disableSuccessMessage": true,
+  "prettier.eslintIntegration": true,
+  "prettier.formatterPriority": -1,
+  "prettier.singleQuote": true,
+  // list
+  "list.indicator": ">",
+  "list.selectedSignText": " ",
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "graphql",
+    "html",
+    "yaml",
+    "json",
+    "python",
+    "java"
+  ],
+  "coc.preferences.hoverTarget": "float",
+  // python config
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.stubPath": "typings",
+  "python.analysis.typeshedPaths": [],
+  "python.analysis.diagnosticSeverityOverrides": {},
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.pythonPath": "python",
+  "python.venvPath": "",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "black",
+  "python.formatting.blackArgs": [],
+  "python.formatting.autopep8Path": "autopep8",
+  "python.formatting.autopep8Args": [],
+  "python.formatting.yapfPath": "yapf",
+  "python.formatting.yapfArgs": [],
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": false,
+  "python.linting.banditEnabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.linting.pytypeEnabled": false,
+  "python.linting.prospectorEnabled": false,
+  "python.linting.pydocstyleEnabled": false,
+  "python.linting.pylamaEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "pyright.disableCompletion": false,
+  "pyright.disableLanguageServices": false,
+  "pyright.disableOrganizeImports": false,
+  //    //java
+  // codelens
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.enabled": true,
+  //""java.jdt.ls.vmargs": "-noverify -Xmx6G -XX:+UseG1GC -XX:+UseStringDeduplication",
+  //"java.jdt.ls.vmargs": "-javaagent:$HOME/.config/nvim/utils/lombok.jar -Xbootclasspath/a:/usr/local/share/lombok.jar",
+  //"java.home": "/usr/lib/jvm/java-15-openjdk",
+  //
+  //
+  //
+  //    "java.referencesCodeLens.enabled": true,
+  //    "java.implementationsCodeLens.enabled": true,
+  //    "java.completion.enabled": true,
+  //    "java.import.maven.enabled": true,
+  //    "java.completion.overwrite": false,
+  //    "java.format.onType.enabled": true,
+  //    "java.completion.guessMethodArguments": true,
+  //    "java.codeGeneration.useBlocks": true,
+  //    "java.errors.incompleteClasspath.severity": "ignore",
+  //    "java.signatureHelp.enabled": true,
+  //    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  //    "java.maven.downloadSources": true,
+  //
+  // snippets
+  "snippets.ultisnips.directories": [
+    "snipsShort",
+    "snipsBig",
+    "snipsPython"
+  ],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snipsBig",
+  // emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  // CSS (disable since I'm also using stylelintplus)
+  // "css.validate": false,
+  // "less.validate": false,
+  // "scss.validate": false,
+  // "wxss.validate": false,
+  // explorer
+  "explorer.width": 30,
+  "explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.icon.enableVimDevicons": false,
+  "explorer.file.showHiddenFiles": false,
+  "explorer.keyMappings.global": {
+    "<cr>": [
+      "expandable?",
+      "expand",
+      "open"
+    ],
+    "v": "open:vsplit"
+  },
+  //LS
+  "tsserver.formatOnType": true,
+  "tsserver.enable": true,
+  // ..
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "filetypes": [
+        "sh"
+      ],
+      "args": [
+        "start"
+      ]
     },
-    "emmet.showAbbreviationSuggestions": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    // CSS (disable since I'm also using stylelintplus)
-    // "css.validate": false,
-    // "less.validate": false,
-    // "scss.validate": false,
-    // "wxss.validate": false,
-    // explorer
-    "explorer.width": 30,
-    "explorer.file.root.template": "[icon] [git] [hidden & 1][root]",
-    "explorer.icon.enableNerdfont": true,
-    "explorer.previewAction.onHover": false,
-    "explorer.icon.enableVimDevicons": false,
-    "explorer.file.showHiddenFiles": false,
-    "explorer.keyMappings.global": {
-        "<cr>": [
-            "expandable?",
-            "expand",
-            "open"
-        ],
-        "v": "open:vsplit"
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": [
+        "lua"
+      ]
     },
-    //LS
-    "tsserver.formatOnType": true,
-    "tsserver.enable": true,
-    // ..
-    "languageserver": {
-        "lua": {
-            "command": "lua-lsp",
-            "filetypes": [
-                "lua"
-            ]
-        },
-        "dockerfile": {
-            "command": "docker-langserver",
-            "filetypes": [
-                "dockerfile"
-            ],
-            "args": [
-                "--stdio"
-            ]
-        },
-        "bash": {
-            "command": "bash-language-server",
-            "args": [
-                "start"
-            ],
-            "filetypes": [
-                "sh"
-            ]
-        },
-        "ccls": {
-            "command": "ccls",
-            "filetypes": [
-                "c",
-                "cpp",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls",
-                "compile_commands.json",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                }
-            }
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": [
+        "dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
+      ],
+      "rootPatterns": [
+        ".ccls",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
         }
-    },
-    //coc-emoji
-    "coc.source.emoji.filetypes": [
-        "markdown"
-    ],
-    //    "translator.engines": [
-    //        "google",
-    //        "bing",
-    //        "youdao",
-    //        "haici"
-    //    ],
-    //    "translator.toLang": "fr",
-    "java.errors.incompleteClasspath.severity": "ignore"
+      }
+    }
+  },
+  //coc-emoji
+  "coc.source.emoji.filetypes": [
+    "markdown"
+  ],
+  //    "translator.engines": [
+  //        "google",
+  //        "bing",
+  //        "youdao",
+  //        "haici"
+  //    ],
+  //    "translator.toLang": "fr",
+  "java.errors.incompleteClasspath.severity": "ignore"
 }
