@@ -2,7 +2,7 @@
 
 mkdir -p $HOME/.config/coc/extensions 
 
-# reset version coc-extenstion 
+#  reset version coc-extenstion 
 
 echo '{"dependencies":{}}'> $HOME/.config/coc/extension/spath-coc-ex1/package.json
 echo "{}"                 > $HOME/.config/nvim/path-coc-ex3/package.json
