@@ -3,15 +3,13 @@
 mkdir -p $HOME/.config/coc/extensions 
 
 # reset version coc-extenstion 
-path-coc-ex1="$HOME/.config/coc/extensions"
-path-coc-ex3="$HOME/.config/nvim"
 
-[ ! -f path-coc-ex1 ] && echo '{"dependencies":{}}'> path-coc-ex1/package.json
-[ ! -f path-coc-ex2 ] && echo "{}"                 > path-coc-ex3/package.json
+echo '{"dependencies":{}}'> $HOME/.config/coc/extension/spath-coc-ex1/package.json
+echo "{}"                 > $HOME/.config/nvim/path-coc-ex3/package.json
 
 
 
-sudo apt update  -y   
+sudo apt update      -y   
 sudo apt install     -y   \
         neofetch          \
         python3           \
