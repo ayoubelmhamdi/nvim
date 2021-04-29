@@ -1,14 +1,5 @@
 #!/bin/bash
 
-mkdir -p $HOME/.config/coc/extensions 
-
-#  reset version coc-extenstion 
-
-echo '{"dependencies":{}}'> $HOME/.config/coc/extension/spath-coc-ex1/package.json
-echo "{}"                 > $HOME/.config/nvim/path-coc-ex3/package.json
-
-
-
 
 sudo xbps-install -Sy     \
         neofetch          \
@@ -45,8 +36,6 @@ sudo xbps-install -Sy     \
 # unlock path of neovim provider
 # used for fix provider3
 
-
-
 pip3  install           \
       pynvim            \
       neovim-remote     \
@@ -59,51 +48,42 @@ npm i npm                    \
       bash-language-server   \
       neovim
 
-npm         install         \
-#    coc-explorer        \
-#    coc-snippets        \
-#    coc-json           \
-#    coc-actions        \
-#      coc-java           \
-#      coc-lists           \
-#      coc-emmet           \
-#      coc-tasks           \
-#      coc-pairs           \
-#      coc-tsserver        \
-#      coc-floaterm        \
-#      coc-html           \
-#      coc-css            \
-#      coc-cssmodules        \
-#      coc-stylelintplus     \
-#      coc-emoji           \
-#      coc-yaml           \
-#      coc-pyright        \
-#      coc-svg           \
-#      coc-prettier        \
-#      coc-vimlsp           \
-#      coc-xml           \
-#      coc-yank           \
-#      coc-sh              \
-#     --global-style    \
-#     --ignore-scripts  \
-#     --no-bin-links    \
-#     --no-package-lock \
-#     --only=prod       \
+#npm install                \
+#    coc-actions            \
+#    coc-css                \
+#    coc-cssmodules         \
+#    coc-emmet              \
+#    coc-emoji              \
+#    coc-explorer           \
+#    coc-floaterm           \
+#    coc-html               \
+#    coc-java               \
+#    coc-json               \
+#    coc-lists              \
+#    coc-pairs              \
+#    coc-prettier           \
+#    coc-pyright            \
+#    coc-sh                 \
+#    coc-snippets           \
+#    coc-stylelintplus      \
+#    coc-svg                \
+#    coc-tasks              \
+#    coc-tsserver           \
+#    coc-vimlsp             \
+#    coc-xml                \
+#    coc-yaml               \
+#    coc-yank               \
+#     --global-style        \
+#     --ignore-scripts      \
+#     --no-bin-links        \
+#     --no-package-lock     \
+#     --only=prod           \
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-git clone                                          \
-    https://github.com/ayoubelmhamdi/nvim.git      \
-    $HOME/.config/nvim 
 
-git clone \
-    https://github.com/neovim/neovim.git           \
-    $HOME/neovim 
 
-git clone --bare \
-    https://github.com/ayoubelmhamdi/dotfiles.git  \
-    $HOME/.dotfiles 
 
 #git clone \
 #    https://github.com/ayoubelmhamdi/scripts.git  \
