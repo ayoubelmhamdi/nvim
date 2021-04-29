@@ -38,7 +38,7 @@ cat  $HOME/UBUNTU-ssh-github.txt
 
 git config --global user.name "Ayoub EL Mhamdi"
 git config --global user.email "ayoub.elmhamdi@gmail.com"
-
+git config core.editor "nvim"
 #++++++++++++++++++++++++++++++++++++++++
 
 cd $HOME/UBUNTU

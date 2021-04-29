@@ -9,65 +9,57 @@ echo "{}"                 > $HOME/.config/nvim/path-coc-ex3/package.json
 
 
 
-sudo apt update      -y   
-sudo apt install     -y   \
+
+sudo xbps-install -Sy     \
         neofetch          \
+        python            \
+        python-pip        \
         python3           \
-        python2           \
         python3-pip       \
         ranger            \
-        ninja-build       \
+        ninja             \
         gettext           \
         libtool           \
-        libtool-bin       \
+        libltdl           \
         autoconf          \
         automake          \
         cmake             \
-        g++               \
+        gcc               \
+        gcc6              \
         pkg-config        \
         unzip             \
-        libx11-dev        \
-        libxext-dev       \
+        libX11-devel      \
+        libXext-devel     \
         tmux              \
         zsh               \
         curl              \
         wget              \
         git               \
-        silversearcher-ag \
+        nodejs            \
+        ripgrep           \
+        the_silver_searcher
 
 
 
-curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
-sudo apt install -y      \
-         aptitude        \
-         nodejs          
-
-sudo aptitude install -y npm 
 
 # unlock path of neovim provider
 # used for fix provider3
 
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py --force-reinstall
-rm get-pip.py
 
 
-pip3 --default-timeout=1000 install \
-        pynvim            \
-        neovim-remote     \
-        ueberzug          \
+pip3  install           \
+      pynvim            \
+      neovim-remote     \
+      ueberzug          \
 
-pip3 install --user --upgrade  --default-timeout=10000  pynvim
-pip2 install --user --upgrade  --default-timeout=10000  pynvim
-python3 -m pip install --upgrade pynvim
+python3 -m pip install --user --upgrade pynvim
 python2 -m pip install --user --upgrade pynvim
 
-npm i npm 
-npm i                      \
-    bash-language-server   \
-    eovim
+npm i npm                    \
+      bash-language-server   \
+      neovim
 
-#sudo npm install         \
+npm         install         \
 #    coc-explorer        \
 #    coc-snippets        \
 #    coc-json           \
@@ -111,7 +103,7 @@ git clone \
 
 git clone --bare \
     https://github.com/ayoubelmhamdi/dotfiles.git  \
-    $HOME/dotfiles 
+    $HOME/.dotfiles 
 
 #git clone \
 #    https://github.com/ayoubelmhamdi/scripts.git  \
