@@ -4,20 +4,24 @@ nnoremap <A-e> :!crf<Space>
 nnoremap <A-d> :!mkdir<Space>
 nnoremap <A-m> :!mv<Space>%<Space>
 
-" changment of v to v
-" nnoremap v V
-" nnoremap V v
-" Fix Y behaviour
-nmap Y y$
-" fix p
-" p="+p
+" fix p y
+nnoremap Y y$
+nnoremap V V$l
+nnoremap <Space>w :w<cr>
+" map p "+p
+" map P "+P
+" map y "+y
+" map Y "+Y
+
+" fast exist in insert  mode
+inoremap jj <esc>
 
 " Tab shortcuts
 nnoremap <A-p> :tabp<CR>
 nnoremap <A-n> :tabn<CR>
 
 " Alias replace all to
-nnoremap <A-s> :%s//gI<Left><Left><Left>
+vnoremap <A-s> :%s///gI<Left><Left><Left><Left>
 
 " _co is best than c i dont know why
 " nnoremap c "_c

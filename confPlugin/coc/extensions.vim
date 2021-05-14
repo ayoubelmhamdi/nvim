@@ -7,8 +7,6 @@ let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-fzf-preview',
   \ 'coc-highlight',
-  \ 'coc-java',
-  \ 'coc-java-debug',
   \ 'coc-json',
   \ 'coc-lists',
   \ 'coc-pairs',

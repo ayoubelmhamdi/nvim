@@ -16,7 +16,7 @@ set expandtab
 set smarttab
 
 set backspace=indent,eol,start
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 set fileformat=unix
 
 set encoding=utf-8
@@ -36,7 +36,7 @@ set wildignore+=*.egg-info/**
 
 " by Alphabet
 set autoread
-set colorcolumn=92
+set colorcolumn=60
 set complete+=kspell
 set completeopt=menuone,longest
 set fileencoding=utf-8
@@ -89,8 +89,8 @@ set undodir=$HOME/.local/tmp//,.
 "tow line for schow error
 set cmdheight=2
 " set endofline
-set list
-set listchars=tab:>-,eol:¶
+" set list
+" set listchars=tab:>-,eol:¶
 
 " set tw=0
 " set wm=0
