@@ -30,7 +30,13 @@ local on_attach = function(client, bufnr)
       group = augroup,
       buffer = bufnr,
       callback = function()
-        lsp_formatting(bufnr)
+        vim.loop.new_timer():start(
+          9000,
+          0,
+          vim.schedule_wrap(function()
+            lsp_formatting(bufnr)
+          end)
+        )
       end,
     })
   end
@@ -53,8 +59,9 @@ null_ls.setup {
 
     --    completion.spell,
     -- C
-    formatting.uncrustify,
-    diagnostics.cppcheck,
+    -- formatting.uncrustify,
+    -- diagnostics.cppcheck,
+    diagnostics.mlint,
     --     -- diagnostics.gccdiag,
     --     -- formatting.clang_format,
     --     -- formatting.astyle,
