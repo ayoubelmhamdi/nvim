@@ -37,8 +37,9 @@ vim.loop.new_timer():start(
   1,
   0,
   vim.schedule_wrap(function()
-    local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
-    for dir in io.popen('ls ' .. install_path):lines() do
+    local opt = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
+    local nvim = vim.fn.stdpath 'config' .. '/lua/'
+    for dir in io.popen('ls ' .. opt):lines() do
       vim.cmd('packadd ' .. dir)
     end
     -- lspconfig not loaded with async, need reopen file again
@@ -67,5 +68,7 @@ vim.loop.new_timer():start(
     require 'c_keymapings'
     require 'c_autocmd'
     require 'c_function'
+    -- plugin
+    vim.cmd('source ' .. nvim .. 'c_octave.vim')
   end)
 )
