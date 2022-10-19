@@ -48,19 +48,19 @@ null_ls.setup {
   debug = false,
   sources = {
     -- All
-    --completion.spell,
-    --completion.luasnip,
+    completion.spell,
+    completion.luasnip,
     -- Rust
     formatting.rustfmt,
     --l Lua
-    -- formatting.stylua,
+    formatting.stylua,
     -- Bash
-    require('null-ls').builtins.formatting.stylua,
-
-    --    completion.spell,
+    diagnostics.shellcheck,
+    code_actions.shellcheck,
+    formatting.shellharden,
     -- C
-    -- formatting.uncrustify,
-    -- diagnostics.cppcheck,
+    formatting.uncrustify,
+    diagnostics.cppcheck,
     diagnostics.mlint,
     --     -- diagnostics.gccdiag,
     --     -- formatting.clang_format,
