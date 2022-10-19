@@ -14,6 +14,7 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
     '*.sh',
     '*.toml',
     '*.yaml',
+    '*.m',
   },
   callback = function()
     vim.b.auto_save = 1
