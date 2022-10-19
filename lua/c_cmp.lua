@@ -92,6 +92,7 @@ cmp.setup {
     { name = 'path', option = { trailing_slash = true }, priority = 80 },
     { name = 'cmp_tabnine', priority = 70 },
     { name = 'treesitter', priority = 80 },
+    { name = 'cmp_matlab', priority = 90 },
     -- { name = 'spell' }, { name = 'spell', keyword_length = 2 },
     {
       name = 'look',
