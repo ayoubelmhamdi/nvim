@@ -14,8 +14,6 @@ hi TabLineFill   guibg=#282828
 hi TabLineSel    guifg=#ffffff   guibg=#880088
 hi TabLine       guifg=#909090   guibg=#282828
 
-
-
 " line number
 set rnu nu
 set numberwidth=4 " the width of widget
@@ -24,8 +22,6 @@ hi LineNr  guifg=#505050   guibg=NONE
 
 " transparent backgroub
 "hi Normal guibg=NONE ctermbg=NONE
-
-
 
 " Errors in Red
 hi LspDiagnosticsVirtualTextError guifg=Red ctermfg=Red
@@ -38,28 +34,26 @@ hi LspDiagnosticsVirtualTextHint guifg=White ctermfg=White
 ]]
 
 vim.loop.new_timer():start(
-  0,
+  1,
   0,
   vim.schedule_wrap(function()
-    local install_path = vim.fn.stdpath 'data' .. '/site/pack/ayoub/opt/'
+    local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
     for dir in io.popen('ls ' .. install_path):lines() do
       vim.cmd('packadd ' .. dir)
     end
-    require 'c_lspkind'
-    require 'c_lspconfig'
-    require 'c_null-ls'
     -- lspconfig not loaded with async, need reopen file again
-    vim.cmd 'exe "e"'
 
+    require 'c_lspkind'
+    require 'c_lspsaga'
+    require 'c_null-ls'
+    require 'c_lspconfig'
     require 'c_cmp'
     require 'c_treesitter'
     require 'c_gruvbox-material'
-
     require 'c_devicons'
     require 'c_indent-blankline'
     require 'c_lualine'
     require 'c_nvim-tree'
-
     require 'c_telescope'
     require 'c_autopair'
     require 'c_leap'
@@ -68,7 +62,6 @@ vim.loop.new_timer():start(
     require 'c_gitsigns'
     require 'c_hlslens'
     require 'c_overseer'
-
     require 'c_set-setting'
     require 'c_neovide'
     require 'c_keymapings'
