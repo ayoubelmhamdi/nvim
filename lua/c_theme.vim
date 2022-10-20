@@ -1,15 +1,12 @@
-syntax off
+lua << EOF
+vim.opt.list = true
+vim.opt.listchars:append 'eol:↴'
+EOF
 
 
 hi TabLineFill   guibg=#282828
 hi TabLineSel    guifg=#ffffff   guibg=#880088
 hi TabLine       guifg=#909090   guibg=#282828
-
-" line number
-set rnu nu
-set numberwidth=4 " the width of widget
-hi LineNr  guifg=#505050   guibg=NONE
-" hi Normal  guifg=White     guibg=Black
 
 " transparent backgroub
 "hi Normal guibg=NONE ctermbg=NONE
@@ -21,9 +18,6 @@ hi LspDiagnosticsVirtualTextWarning guifg=Yellow ctermfg=Yellow
 " Info and Hints in White
 hi LspDiagnosticsVirtualTextInformation guifg=White ctermfg=White
 hi LspDiagnosticsVirtualTextHint guifg=White ctermfg=White
-"autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
-hi SignColumn    guibg=NONE
-hi Folded        guibg=NONE
 
 
 " restore cursor position

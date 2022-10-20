@@ -15,6 +15,9 @@ vim.cmd [[
 
 "set scrolloff=99
 "set sidescrolloff=99
+
+setlocal! spell! spelllang=en,fr
+
 set spellsuggest+=10
 set linebreak
 set path+=**

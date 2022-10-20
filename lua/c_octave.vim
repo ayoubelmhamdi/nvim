@@ -15,12 +15,15 @@
 " Avoid changing vim variable "iskeyword" and regexp matching for local buffer.
 " Performance improvements in regular expressions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
   finish
 endif
 
+if (&ft=='octave' || &ft=='matlab')
 " Use case sensitive matching of keywords
 syn case match
 
@@ -667,5 +670,6 @@ if version >= 508 || !exists("did_octave_syntax_inits")
 endif
 
 let b:current_syntax = "octave"
+endif
 
-"EOF	vim: ts=2 et tw=80 sw=2 sts=0
+" vim: ts=2 et tw=80 sw=2 sts=0
