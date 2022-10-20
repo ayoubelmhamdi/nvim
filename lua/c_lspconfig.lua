@@ -42,11 +42,10 @@ local on_attach = function(client, bufnr)
     require('telescope.builtin').diagnostics { bufnr = 0 }
   end, bufopts)
   vim.keymap.set('n', ',lD', require('telescope.builtin').diagnostics, bufopts)
-  vim.keymap.set('n', ',lrn', vim.lsp.buf.rename, { desc = 'LSP: rename' }, { buffer = bufnr })
-
+  vim.keymap.set('n', ',tc', require('telescope.builtin').commands, bufopts)
+  vim.keymap.set('n', ',th', require('telescope.builtin').help_tags, bufopts)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   -- overwrite by lspsaga
   -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -210,4 +209,4 @@ require('lspconfig').sumneko_lua.setup {
     },
   },
 }
-vim.cmd'LspStart'
+vim.cmd 'LspStart'
