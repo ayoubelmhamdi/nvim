@@ -70,5 +70,6 @@ vim.loop.new_timer():start(
     require 'c_function'
     -- plugin
     vim.cmd('source ' .. nvim .. 'c_octave.vim')
+    vim.cmd('source ' .. nvim .. 'c_gdiff.vim')
   end)
 )
