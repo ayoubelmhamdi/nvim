@@ -1,14 +1,9 @@
-vim.g.mapleader = ' '
-vim.o.laststatus = 0
-vim.opt.termguicolors = true
-vim.wo.signcolumn = 'yes'
-
 local vim_req = function(name)
   local nvim = vim.fn.stdpath 'config' .. '/lua/'
   vim.cmd('source ' .. nvim .. name .. '.vim')
 end
 
-vim_req 'c_theme'
+vim_req 'c_startup'
 
 vim.loop.new_timer():start(
   1,
@@ -18,9 +13,12 @@ vim.loop.new_timer():start(
     for dir in io.popen('ls ' .. opt):lines() do
       vim.cmd('packadd ' .. dir)
     end
+    -- octave overwrite by theme, and make error with treesitter
+    vim_req 'c_theme'
+    require 'c_theme'
     -- third part vimL plugin
-    vim_req 'c_octave'
     vim_req 'c_gdiff'
+    vim_req 'c_octave'
     -- lua config
     -- lspconfig not loaded with async, need reopen file again
     require 'c_lspkind'
@@ -29,7 +27,6 @@ vim.loop.new_timer():start(
     require 'c_lspconfig'
     require 'c_cmp'
     require 'c_treesitter'
-    require 'c_theme'
     require 'c_devicons'
     require 'c_indent-blankline'
     require 'c_lualine'
