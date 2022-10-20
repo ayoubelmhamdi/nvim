@@ -61,7 +61,8 @@ null_ls.setup {
     -- C
     formatting.uncrustify,
     diagnostics.cppcheck,
-    diagnostics.mlint,
+    -- diagnostics.mlint,
+    diagnostics.mh_lint,
     --     -- diagnostics.gccdiag,
     --     -- formatting.clang_format,
     --     -- formatting.astyle,
