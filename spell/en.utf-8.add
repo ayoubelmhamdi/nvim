@@ -72,3 +72,6 @@ localhost
 v2
 Neovim
 config
+autopair
+shellcheck
+cursorline
