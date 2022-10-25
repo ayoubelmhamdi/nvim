@@ -26,17 +26,11 @@ local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 local on_attach = function(client, bufnr)
   if client.supports_method 'textDocument/formatting' then
     vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
-    vim.api.nvim_create_autocmd('BufWritePre', {
+    vim.api.nvim_create_autocmd('BufLeave', {
       group = augroup,
       buffer = bufnr,
       callback = function()
-        vim.loop.new_timer():start(
-          9000,
-          0,
-          vim.schedule_wrap(function()
-            lsp_formatting(bufnr)
-          end)
-        )
+        lsp_formatting(bufnr)
       end,
     })
   end
