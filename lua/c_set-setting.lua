@@ -49,10 +49,10 @@ set updatetime=300
 set wildignore+=*.o,*.obj,.git,*.pyc
 
 
-set noswapfile noundofile nobackup
-set backupdir=/tmp/nvim/backup//
-set directory=/tmp/nvim/backup//
-set undodir=/tmp/nvim/backup//
+"set noswapfile noundofile nobackup
+set backupdir=/tmp/nvim/backup1//
+set directory=/tmp/nvim/backup2//
+set undodir=/tmp/nvim/backup3//
 
 set autoread autowrite
 set ignorecase smartcase
