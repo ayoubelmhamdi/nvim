@@ -10,7 +10,7 @@ saga.init_lsp_saga()
 keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', { silent = true })
 
 -- Code action
-keymap({ 'n', 'v' }, '<space>ca', '<cmd>Lspsaga code_action<CR>', { silent = true })
+keymap({ 'n', 'v' }, ',ca', '<cmd>Lspsaga code_action<CR>', { silent = true })
 
 -- Rename
 keymap('n', '<space>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
