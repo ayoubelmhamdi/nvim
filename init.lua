@@ -1,26 +1,20 @@
+--require 'impatient'
+vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
+
 VIM_REQ = function(name)
   local nvim = vim.fn.stdpath 'config' .. '/lua/'
   vim.cmd('source ' .. nvim .. name .. '.vim')
 end
 VIM_REQ 'c_startup'
--- lsp+cmp(deps like luasnip) not work with (loop and packadd)
 
--- not work coorrectly with vim.loop
--- require 'c_lspconfig'
-
-vim.defer_fn(function()
+local startup = function()
   local opt = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
   for dir in io.popen('ls ' .. opt):lines() do
     vim.cmd('packadd ' .. dir)
   end
 
-  --
-  -- cmp
-  -- it suppert load config inside `vim.loop`
-  -- but must add to the `rtp` after `vim.loop`
-  --
   require 'c_lspconfig'
-  vim.cmd [[LspStart]]
+  --vim.cmd [[LspStart]]
 
   require 'c_cmp'
 
@@ -30,17 +24,19 @@ vim.defer_fn(function()
   VIM_REQ 'c_theme'
   require 'c_theme'
 
-  --
-  -- third part vimL plugin
-  --
+  ---
+  ---third part vimL plugin
+  ---
   require 'c_lspsaga'
   require 'c_lspkind'
   require 'c_null-ls'
+
   require 'c_treesitter'
   require 'c_devicons'
   require 'c_indent-blankline'
   require 'c_lualine'
   require 'c_nvim-tree'
+
   require 'c_telescope'
   require 'c_autopair'
   require 'c_leap'
@@ -48,10 +44,25 @@ vim.defer_fn(function()
   require 'c_comment'
   require 'c_gitsigns'
   require 'c_hlslens'
+
   require 'c_overseer'
+  require 'c_packer'
+  require 'c_dap'
+  require 'c_dap-c'
+
   require 'c_set-setting'
   require 'c_neovide'
   require 'c_keymapings'
   require 'c_autocmd'
   require 'c_function'
-end, 2)
+end
+
+local augroup = vim.api.nvim_create_augroup('BlazinglyFast', {})
+vim.api.nvim_clear_autocmds { group = augroup }
+vim.api.nvim_create_autocmd('CursorMoved', {
+  group = augroup,
+  callback = function()
+    startup()
+    pcall(vim.api.nvim_del_augroup_by_name, 'BlazinglyFast')
+  end,
+})
