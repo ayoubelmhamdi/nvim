@@ -1,4 +1,4 @@
---require 'impatient'
+-- require 'impatient'
 vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
 
 VIM_REQ = function(name)
@@ -14,8 +14,6 @@ local startup = function()
   end
 
   require 'c_lspconfig'
-  --vim.cmd [[LspStart]]
-
   require 'c_cmp'
 
   VIM_REQ 'c_gdiff'
