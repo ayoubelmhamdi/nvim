@@ -10,6 +10,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_set_keymap('n', '<space><space>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
 vim.cmd [[
 nnoremap x "_x
 nnoremap X "_X
