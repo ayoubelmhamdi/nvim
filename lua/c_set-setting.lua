@@ -49,7 +49,9 @@ set updatetime=300
 set wildignore+=*.o,*.obj,.git,*.pyc
 
 
-"set noswapfile noundofile nobackup
+set noswapfile 
+set nobackup
+"set noundofile 
 set backupdir=/tmp/nvim/backup1//
 set directory=/tmp/nvim/backup2//
 set undodir=/tmp/nvim/backup3//
