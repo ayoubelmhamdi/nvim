@@ -8,12 +8,12 @@ require('onenord').setup {
   fade_nc = false, -- Fade non-current windows, making them more distinguishable
   -- Style that is applied to various groups: see `highlight-args` for options
   styles = {
-    comments = 'italic',
+    comments = 'NONE',
     strings = 'bold',
     keywords = 'NONE',
     functions = 'bold',
     variables = 'NONE',
-    diagnostics = 'underline',
+    diagnostics = 'NONE',
   },
   disable = {
     background = false, -- Disable setting the background color
