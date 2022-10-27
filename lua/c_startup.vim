@@ -1,6 +1,12 @@
 syntax off
 filetype plugin indent off
 
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunction
 
 lua << EOF
 -- disable netrw at the very start of your init.lua
