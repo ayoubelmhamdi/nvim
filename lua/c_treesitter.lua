@@ -133,5 +133,5 @@ parser_config.matlab = {
     files = { 'src/parser.c' },
     branch = 'main',
   },
-  filetype = 'octave', -- if filetype does not agrees with parser name
+  filetype = 'matlab', -- if filetype does not agrees with parser name
 }
