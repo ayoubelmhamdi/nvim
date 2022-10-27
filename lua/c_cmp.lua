@@ -2,8 +2,8 @@
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 ------------------------------luasnip-----------------------------------------------------
-require('luasnip.loaders.from_lua').lazy_load()
-require('luasnip/loaders/from_snipmate').lazy_load()
+--require('luasnip.loaders.from_lua').lazy_load()
+--require('luasnip/loaders/from_snipmate').lazy_load()
 local ls = require 'luasnip'
 local types = require 'luasnip.util.types'
 
