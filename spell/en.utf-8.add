@@ -75,3 +75,7 @@ config
 autopair
 shellcheck
 cursorline
+struct
+url
+endfunction
+function
