@@ -1,4 +1,5 @@
 -- require 'impatient'
+
 vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
 
 VIM_REQ = function(name)
@@ -13,14 +14,8 @@ local startup = function()
     vim.cmd('packadd ' .. dir)
   end
 
-  require 'c_lspconfig'
   require 'c_cmp'
-
-  VIM_REQ 'c_gdiff'
-  VIM_REQ 'c_octave'
-
-  VIM_REQ 'c_theme'
-  require 'c_theme'
+  require 'c_lspconfig'
 
   ---
   ---third part vimL plugin
@@ -48,11 +43,19 @@ local startup = function()
   require 'c_dap'
   require 'c_dap-c'
 
-  require 'c_set-setting'
+  --5require 'c_set-setting'
   require 'c_neovide'
   require 'c_keymapings'
   require 'c_autocmd'
   require 'c_function'
+  VIM_REQ 'c_gdiff'
+
+  VIM_REQ 'c_theme'
+  require 'c_theme'
+
+  --
+  -- Highlight should at the end
+  VIM_REQ 'c_matlab'
 end
 
 local augroup = vim.api.nvim_create_augroup('BlazinglyFast', {})
