@@ -53,37 +53,13 @@ packer.startup(function(use)
   -- ██      ██      ██    ██ ██    ██ ██ ██  ██ ██
   -- ██      ███████  ██████   ██████  ██ ██   ████
 
-  use {
-    'wbthomason/packer.nvim',
-    opt = true,
-    --cmd = "require('c_keymaps').packer", -- idont know wy not loaded keymap if it's opt
-    -- how i can do it without use events
-    config = "require('c_packer')",
-    cmd = {
-      'PackerCompile',
-      'PackerClean',
-      'PackerInstall',
-      'PackerSync',
-    },
-  }
+  use { 'wbthomason/packer.nvim', opt = true }
 
   use { 'lewis6991/impatient.nvim' }
-  use { 'nathom/filetype.nvim' }
   use { 'dstein64/vim-startuptime' }
-  use { 'nvim-lua/plenary.nvim', module = 'plenary' }
+  use { 'nvim-lua/plenary.nvim' }
 
-  use {
-    'windwp/nvim-autopairs',
-    config = "require('c_autopair')",
-    after = 'nvim-cmp',
-  }
-
-  use {
-    'lewis6991/gitsigns.nvim',
-    event = 'UIEnter',
-    ft = 'gitcommit',
-    config = "require('c_gitsigns')",
-  }
+  use { 'kyazdani42/nvim-tree.lua', opt = true }
 
   -- ████████ ██   ██ ███████ ███    ███ ███████
   --    ██    ██   ██ ██      ████  ████ ██
@@ -91,54 +67,21 @@ packer.startup(function(use)
   --    ██    ██   ██ ██      ██  ██  ██ ██
   --    ██    ██   ██ ███████ ██      ██ ███████
   --
-
-  use {
-    'sainnhe/gruvbox-material',
-    event = 'UIEnter',
-    --event = 'CursorMoved',
-    --after = 'lualine',
-    config = "require('c_gruvbox-material')",
-  }
-
-  use {
-    'kyazdani42/nvim-web-devicons',
-    module = 'nvim-web-devicons',
-    event = 'UIEnter',
-    config = "require('c_devicons')",
-  }
-
-  --*   -- Theme
-  use {
-    'lukas-reineke/indent-blankline.nvim',
-    module='indent-blankline.nvim',
-    --event = 'UIEnter',
-    opt=true,
-    config = "require('c_indent-blankline')",
-  }
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    --event = 'CursorMoved',
-    module = 'lualine',
-    --event = 'UIEnter',
-    config = "require('c_lualine')",
-  }
+  use { 'rmehri01/onenord.nvim', opt = true }
+  use { 'sainnhe/gruvbox-material', opt = true }
+  use { 'kyazdani42/nvim-web-devicons', opt = true }
+  use { 'lukas-reineke/indent-blankline.nvim', opt = true }
+  use { 'nvim-lualine/lualine.nvim', opt = true }
 
   --@ use {
   --@ 	'norcalli/nvim-colorizer.lua' ,
-  --@ 	event = 'CursorMoved',
-  --@ 	config = "require('c_')",
   --@ }
   --@ use {
   --@   'tjdevries/colorbuddy.nvim',
-  --@   event = 'CursorMoved',
-  --@   config = "require('c_')",
   --@ }
   --
   --@  use {
   --@    'ellisonleao/gruvbox.nvim',
-  --@    event = 'CursorMoved',
-  --@    config = "require('c_')",
   --@  }
 
   -- ████████ ██████  ███████ ███████       ███████ ██ ████████ ████████ ███████ ██████
@@ -147,43 +90,13 @@ packer.startup(function(use)
   --    ██    ██   ██ ██      ██                 ██ ██    ██       ██    ██      ██   ██
   --    ██    ██   ██ ███████ ███████       ███████ ██    ██       ██    ███████ ██   ██
 
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    --event = { 'BufRead', 'BufNewFile' },
-    module = 'nvim-treesitter',
-    run = ':TSUpdate',
-    config = "require('c_treesitter')",
-  }
-
-  use {
-    'nvim-treesitter/playground',
-    module = 'playground',
-  }
-
-  use {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-    module = 'nvim-treesitter-textobjects',
-  }
-
-  use {
-    'p00f/nvim-ts-rainbow',
-    module = 'nvim-ts-rainbow',
-  }
-
-  use {
-    'JoosepAlviste/nvim-ts-context-commentstring',
-    module = 'ts_context_commentstring',
-  }
-
-  use {
-    'David-Kunz/treesitter-unit',
-    module = 'treesitter-unit',
-  }
-
-  use {
-    'lewis6991/spellsitter.nvim',
-    module = 'spellsitter',
-  }
+  use { 'nvim-treesitter/nvim-treesitter', opt = true }
+  use { 'nvim-treesitter/playground', opt = true }
+  use { 'nvim-treesitter/nvim-treesitter-textobjects', opt = true }
+  use { 'p00f/nvim-ts-rainbow', opt = true }
+  use { 'JoosepAlviste/nvim-ts-context-commentstring', opt = true }
+  use { 'David-Kunz/treesitter-unit', opt = true }
+  use { 'lewis6991/spellsitter.nvim', opt = true }
 
   -- ████████ ███████ ██      ███████ ███████  ██████  ██████  ██████  ███████
   --    ██    ██      ██      ██      ██      ██      ██    ██ ██   ██ ██
@@ -191,23 +104,9 @@ packer.startup(function(use)
   --    ██    ██      ██      ██           ██ ██      ██    ██ ██      ██
   --    ██    ███████ ███████ ███████ ███████  ██████  ██████  ██      ███████
 
-  use {
-    'nvim-telescope/telescope.nvim',
-    --cmd = "require('c_keymaps').telescope()",
-    config = "require('c_telescope')",
-    event = 'UIEnter',
-  }
-  use {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make',
-    module = 'telescope._extensions.fzf',
-  }
-
-  use {
-    'ThePrimeagen/harpoon',
-    module = 'harpoon',
-    --after='telescope-nvim'
-  }
+  use { 'nvim-telescope/telescope.nvim', opt = true }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', opt = true }
+  use { 'ThePrimeagen/harpoon', opt = true }
 
   -- ██      ███████ ██████
   -- ██      ██      ██   ██
@@ -215,76 +114,19 @@ packer.startup(function(use)
   -- ██           ██ ██
   -- ███████ ███████ ██
 
-  use {
-    'neovim/nvim-lspconfig',
-    --opt = true,
-    config = "require('c_lspconfig')",
-    --event = 'CursorHold' -- 40ms lazy lazy load
-    event = 'UIEnter', -- 40ms
-    --event = 'VimEnter' -- 180ms E:Telescope
-    --event = 'BufReadPre' -- 50ms E: telescope
-    --event = 'InsertEnter', -- 59ms
-    --event = 'BufWinEnter' -- 180ms
-    --event = 'BufEnter', -- 180ms
-  }
+  use { 'neovim/nvim-lspconfig', opt = true }
+  use { 'jose-elias-alvarez/null-ls.nvim', opt = true }
+  use { 'kosayoda/nvim-lightbulb', opt = true }
+  use { 'SmiteshP/nvim-navic', opt = true }
+  use { 'nvim-lua/lsp-status.nvim', opt = true }
+  use { 'onsails/lspkind-nvim', opt = true }
+  use { 'glepnir/lspsaga.nvim', opt = true }
+  use { 'ray-x/lsp_signature.nvim', opt = true }
+  use { 'https://git.sr.ht/~whynothugo/lsp_lines.nvim', opt = true }
+  use { 'windwp/nvim-ts-autotag', opt = true }
 
-  use {
-    'folke/neodev.nvim',
-    module='neodev'
-  }
-  use {
-    'kosayoda/nvim-lightbulb',
-    module = 'nvim-lightbulb',
-  }
-  use {
-    'SmiteshP/nvim-navic',
-    module = 'nvim-navic',
-  }
-
-  use {
-    'nvim-lua/lsp-status.nvim',
-    module = 'lsp-status',
-    --config = "require('c_')",
-  }
-  use {
-    'onsails/lspkind-nvim',
-    --after= 'lspconfig',
-    module = 'lspkind',
-    wants = 'lspconfig',
-    config = "require('c_lspkind')",
-  }
-
-  use {
-    'jose-elias-alvarez/null-ls.nvim',
-    --event = 'UIEnter',
-    --after = 'lspconfig',
-    module='null-ls',
-    config = "require('c_null-ls')",
-  }
-
-  use {
-    'akinsho/flutter-tools.nvim',
-    --after= 'lspconfig',
-    --config = "require('c_')",
-  }
-
-  use {
-    'glepnir/lspsaga.nvim',
-    module = 'lspsaga.nvim',
-    --config = "require('c_')",
-  }
-
-  use {
-    'ray-x/lsp_signature.nvim',
-    module = 'lsp_signature.nvim',
-    --config = "require('c_')",
-  }
-
-  use {
-    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    module = 'lsp_lines.nvim',
-    --config = "require('c_')",
-  }
+  use { 'folke/neodev.nvim', opt = true }
+  use { 'akinsho/flutter-tools.nvim', opt = true }
 
   --  ██████ ███    ███ ██████
   -- ██      ████  ████ ██   ██
@@ -292,90 +134,21 @@ packer.startup(function(use)
   -- ██      ██  ██  ██ ██
   --  ██████ ██      ██ ██
 
-  use {
-    'windwp/nvim-ts-autotag',
-    --event = 'InsertEnter',
-    after = 'nvim-treesitter',
-  }
-
-  use {
-    'kyazdani42/nvim-tree.lua',
-    cmd = 'NvimTreeToggle',
-    config = "require('c_nvim-tree')",
-  }
-
-  -- nvim-cmp
-  use { 'rafamadriz/friendly-snippets', event = 'InsertEnter' }
-  use {
-    'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
-    after = 'friendly-snippets',
-    config = "require('c_cmp')",
-    module = 'cmp',
-  }
-  use {
-    'L3MON4D3/LuaSnip',
-    wants = 'friendly-snippets',
-    after = 'nvim-cmp',
-    module = 'luasnip',
-  }
-  use {
-    'saadparwaiz1/cmp_luasnip',
-    after = 'LuaSnip',
-  }
-
-  use {
-    'hrsh7th/cmp-nvim-lua',
-    after = 'cmp_luasnip',
-    module = 'cmp-nvim-lua',
-  }
-  use {
-    'hrsh7th/cmp-nvim-lsp',
-    after = 'cmp-nvim-lua',
-    module = 'cmp-nvim-lsp',
-  }
-  use {
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    after = 'cmp-nvim-lsp',
-    mudule = 'cmp-nvim-lsp-signature-help',
-  }
-  use {
-    'hrsh7th/cmp-buffer',
-    after = 'cmp-nvim-lsp-signature-help',
-    module = 'cmp-buffer',
-  }
-  use {
-    'hrsh7th/cmp-path',
-    after = 'cmp-buffer',
-    module = 'cmp-path',
-  }
-  use {
-    'hrsh7th/cmp-cmdline',
-    after = 'cmp-path',
-    module = 'cmp-cmdline',
-  }
-  use {
-    'ray-x/cmp-treesitter',
-    after = 'cmp-cmdline',
-    module = 'cmp-treesitter',
-  }
-  use {
-    'octaltree/cmp-look',
-    after = 'cmp-treesitter',
-    module = 'cmp-look',
-  }
-  --test get suggestions from all stings in all pages webs opend by chrome
-  use {
-    'wxxxcxx/cmp-browser-source',
-    after = 'cmp-look',
-    module = 'cmp-browser-source',
-  }
-  -- use { 'f3fora/cmp-spell' ,
-  --    after = 'LuaSnip',
-  -- }
-  -- use { 'hrsh7th/cmp-emoji' ,
-  --    after = 'LuaSnip',
-  -- }
+  use { 'rafamadriz/friendly-snippets', opt = true }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*', opt = true }
+  use { 'saadparwaiz1/cmp_luasnip' }
+  use { 'hrsh7th/cmp-nvim-lua' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-nvim-lsp-signature-help' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'ray-x/cmp-treesitter' }
+  use { 'octaltree/cmp-look' }
+  -- use { 'wxxxcxx/cmp-browser-source' } -- test get suggestions from all stings in all pages webs opend by chrome
+  -- use { 'f3fora/cmp-spell' }
+  -- use { 'hrsh7th/cmp-emoji' }
 
   -- ██████   █████  ██████
   -- ██   ██ ██   ██ ██   ██
@@ -383,29 +156,10 @@ packer.startup(function(use)
   -- ██   ██ ██   ██ ██
   -- ██████  ██   ██ ██
 
-  use {
-    'mfussenegger/nvim-dap',
-    event = 'UIEnter',
-    config = function()
-      require 'c_dap'
-      require 'c_dap-c'
-    end,
-  }
-
-  use {
-    'rcarriga/nvim-dap-ui',
-    module = 'dapui',
-  }
-
-  use {
-    'theHamsta/nvim-dap-virtual-text',
-    module = 'nvim-dap-virtual-text',
-  }
-
-  use {
-    'leoluz/nvim-dap-go',
-    module = 'dap-go',
-  }
+  use { 'mfussenegger/nvim-dap', opt = true }
+  use { 'rcarriga/nvim-dap-ui', opt = true }
+  use { 'theHamsta/nvim-dap-virtual-text', opt = true }
+  use { 'leoluz/nvim-dap-go', opt = true }
 
   -- ███    ██ ███████ ██     ██
   -- ████   ██ ██      ██     ██
@@ -413,82 +167,30 @@ packer.startup(function(use)
   -- ██  ██ ██ ██      ██ ███ ██
   -- ██   ████ ███████  ███ ███
 
-  use {
-    'ray-x/guihua.lua',
-    run = 'cd lua/fzy && make',
-    module = 'guihua',
-  }
-  --  -- like hop
-   use {
-     'ggandor/leap.nvim',
-     event = 'CursorMoved',
-     config = "require('c_leap')",
-   }
-  --  fold
-  --  use {
-  --    'kevinhwang91/nvim-ufo',
-  --    event = 'CursorMoved',
-  --    config = "require('c_')",
-  --    requires = 'kevinhwang91/promise-async' }
-  --  }
-  use {
-    'kylechui/nvim-surround',
-    event = 'UIEnter',
-    config = "require('c_surround')",
-  }
-  use {
-    'numToStr/Comment.nvim',
-    event = 'CursorMoved',
-    config = "require('c_comment')",
-  }
-  use {
-    'kevinhwang91/nvim-hlslens',
-    module = 'hlslens',
-    config = "require('c_hlslens')",
-  }
+  use { 'ray-x/guihua.lua', run = 'cd lua/fzy && make', opt = true }
+  use { 'ggandor/leap.nvim', opt = true }
+  use { 'kylechui/nvim-surround', opt = true }
+  use { 'numToStr/Comment.nvim', opt = true }
+  use { 'kevinhwang91/nvim-hlslens', opt = true }
 
-  --*   -- git
-  --*   use { 'sindrets/diffview.nvim' }
-  --*   use { 'TimUntersberger/neogit' }
-  use {
-    'airblade/vim-rooter',
-    event = 'UIEnter',
-  }
+  --  -- git
+  --  use { 'sindrets/diffview.nvim' }
+  --  use { 'TimUntersberger/neogit' }
+  use { 'airblade/vim-rooter', opt = true }
+  use { 'lewis6991/gitsigns.nvim', opt = true }
 
-  --*   -- Misc
-  use {
-    '907th/vim-auto-save',
-    event = 'UIEnter',
-  }
-  --*   use { 'tjdevries/train.nvim' }
-  --*   -- use { 'phaazon/hop.nvim' }
-  --*   use { 'folke/todo-comments.nvim' }
+  --  -- Misc
+  use { '907th/vim-auto-save', opt = true }
+  --  use { 'tjdevries/train.nvim' }
 
-  --*   -- Explorer & Terminal
-  --*   use { 'luukvbaal/nnn.nvim' }
-  --*   use { 'voldikss/vim-floaterm' }
-  --*   use { 'static-nvim/mkdir' }
-  use {
-    'fedepujol/move.nvim',
-    event = 'UIEnter',
-  }
-
-  use {
-    'WhoIsSethDaniel/lualine-lsp-progress.nvim',
-    module = 'lualine-lsp-progress.nvim',
-    --	event = 'CursorMoved',
-  }
-
-  use {
-    'barreiroleo/ltex-extra.nvim',
-    module = 'ltex_extra',
-  }
-
-  use {
-    'stevearc/overseer.nvim',
-    event = 'UIEnter',
-    config = "require('c_overseer')",
-  }
+  --  -- Explorer & Terminal
+  --  use { 'luukvbaal/nnn.nvim' }
+  --  use { 'voldikss/vim-floaterm' }
+  use { 'static-nvim/mkdir', opt = true }
+  use { 'fedepujol/move.nvim', opt = true }
+  use { 'WhoIsSethDaniel/lualine-lsp-progress.nvim', opt = true }
+  use { 'barreiroleo/ltex-extra.nvim', opt = true }
+  use { 'stevearc/overseer.nvim', opt = true }
 end)
 
 -- vim.cmd [[autocmd BufWritePost packer.lua source <afile> | PackerCompile]]
