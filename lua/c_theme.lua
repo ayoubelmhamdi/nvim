@@ -5,7 +5,7 @@ require('onenord').setup {
   fade_nc = false, -- Fade non-current windows, making them more distinguishable
   -- Style that is applied to various groups: see `highlight-args` for options
   styles = {
-    comments = 'NONE',
+    comments = 'italic,bold',
     strings = 'bold',
     keywords = 'NONE',
     functions = 'bold',
