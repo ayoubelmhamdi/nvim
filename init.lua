@@ -43,7 +43,7 @@ local startup = function()
   require 'c_dap'
   require 'c_dap-c'
 
-  --5require 'c_set-setting'
+  require 'c_set-setting'
   require 'c_neovide'
   require 'c_keymapings'
   require 'c_autocmd'
@@ -51,7 +51,7 @@ local startup = function()
   VIM_REQ 'c_gdiff'
 
   VIM_REQ 'c_theme'
-  require 'c_theme'
+  require 'c_onenord'
 
   --
   -- Highlight should at the end
