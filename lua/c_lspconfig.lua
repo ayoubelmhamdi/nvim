@@ -169,30 +169,6 @@ require('lspconfig').sumneko_lua.setup {
           'use',
           'vim',
         },
-        neededFileStatus = {
-          codestyle_check = 'Any',
-        },
-      },
-      format = {
-        enable = true,
-        defaultConfig = {
-          indent_style = 'space',
-          indent_size = 2,
-          continuation_indent_size = 4,
-          quote_style = 'single',
-          call_arg_parentheses = 'keep',
-          local_assign_continuation_align_to_first_expression = true,
-          align_call_args = true,
-          align_function_define_params = true,
-          align_table_field_to_first_field = true,
-          keep_one_space_between_table_and_bracket = true,
-          keep_one_space_between_namedef_and_attribute = false,
-          continuous_assign_statement_align_to_equal_sign = true,
-          continuous_assign_table_field_align_to_equal_sign = true,
-          do_statement_no_indent = false,
-          if_condition_no_continuation_indent = false,
-          if_condition_align_with_each_other = true,
-        },
       },
       workspace = {
         library = {
