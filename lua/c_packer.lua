@@ -116,14 +116,15 @@ packer.startup(function(use)
 
   use { 'neovim/nvim-lspconfig', opt = true }
   use { 'jose-elias-alvarez/null-ls.nvim', opt = true }
-  use { 'kosayoda/nvim-lightbulb', opt = true }
+
+  -- use { 'kosayoda/nvim-lightbulb', opt = true }
   use { 'SmiteshP/nvim-navic', opt = true }
   use { 'nvim-lua/lsp-status.nvim', opt = true }
   use { 'onsails/lspkind-nvim', opt = true }
   use { 'glepnir/lspsaga.nvim', opt = true }
-  use { 'ray-x/lsp_signature.nvim', opt = true }
   use { 'https://git.sr.ht/~whynothugo/lsp_lines.nvim', opt = true }
   use { 'windwp/nvim-ts-autotag', opt = true }
+  -- use { 'ray-x/lsp_signature.nvim', opt = true }
 
   use { 'folke/neodev.nvim', opt = true }
   use { 'akinsho/flutter-tools.nvim', opt = true }
