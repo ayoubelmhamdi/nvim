@@ -14,66 +14,64 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local handlers = {
 
-  ['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    update_in_insert = false,
-    virtual_text = true,
-  }),
-  ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
-  ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
+    ['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+        underline = true,
+        update_in_insert = false,
+        virtual_text = true,
+    }),
+    ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
+    ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
 }
 
 local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  -- plugins
-  -- show the class>fun>int
-  -- require('nvim-navic').attach(client, bufnr)
+    -- plugins
+    -- require('nvim-navic').attach(client, bufnr) -- show the class>fun>int
 
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  local bufopts = { noremap = true, silent = true, buffer = bufnr }
-  vim.keymap.set('n', ',lR', require('telescope.builtin').lsp_definitions, bufopts)
-  vim.keymap.set('n', ',lr', require('telescope.builtin').lsp_references, bufopts)
-  vim.keymap.set('n', ',ly', require('telescope.builtin').lsp_document_symbols, bufopts)
-  vim.keymap.set('n', ',lY', require('telescope.builtin').lsp_workspace_symbols, bufopts)
-  vim.keymap.set('n', ',ld', function()
-    require('telescope.builtin').diagnostics { bufnr = 0 }
-  end, bufopts)
-  vim.keymap.set('n', ',lD', require('telescope.builtin').diagnostics, bufopts)
-  vim.keymap.set('n', ',tc', require('telescope.builtin').commands, bufopts)
-  vim.keymap.set('n', ',th', require('telescope.builtin').help_tags, bufopts)
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  -- overwrite by lspsaga
-  -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-  -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  vim.keymap.set('n', '<space>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, bufopts)
-  vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', function()
-    vim.lsp.buf.format { async = true }
-  end, bufopts)
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    vim.keymap.set('n', ',lR', require('telescope.builtin').lsp_definitions, bufopts)
+    vim.keymap.set('n', ',lr', require('telescope.builtin').lsp_references, bufopts)
+    vim.keymap.set('n', ',ly', require('telescope.builtin').lsp_document_symbols, bufopts)
+    vim.keymap.set('n', ',lY', require('telescope.builtin').lsp_workspace_symbols, bufopts)
+    vim.keymap.set('n', ',ld', function()
+        require('telescope.builtin').diagnostics { bufnr = 0 }
+    end, bufopts)
+    vim.keymap.set('n', ',lD', require('telescope.builtin').diagnostics, bufopts)
+    vim.keymap.set('n', ',tc', require('telescope.builtin').commands, bufopts)
+    vim.keymap.set('n', ',th', require('telescope.builtin').help_tags, bufopts)
+    -- Mappings.
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    -- overwrite by lspsaga
+    -- vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+    -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
+    -- vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+    vim.keymap.set('n', '<space>wl', function()
+        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    end, bufopts)
+    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', '<space>f', function()
+        vim.lsp.buf.format { async = true }
+    end, bufopts)
 end
 
-local servers = { 'bashls', 'pyright', 'rust_analyzer', 'tsserver', 'dartls', 'texlab' }
+local servers = { 'bashls', 'pyright', 'rust_analyzer', 'tsserver', 'dartls' }
 for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-    handlers = handlers,
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = { debounce_text_changes = 150 },
-  }
+    require('lspconfig')[lsp].setup {
+        handlers = handlers,
+        capabilities = capabilities,
+        on_attach = on_attach,
+        flags = { debounce_text_changes = 150 },
+    }
 end
 
 -- require('lspconfig').grammarly.setup {
@@ -88,11 +86,11 @@ local clangd_capabilities = capabilities
 clangd_capabilities.offsetEncoding = 'utf-8'
 
 require('lspconfig').clangd.setup {
-  handlers = handlers,
-  capabilities = clangd_capabilities,
-  on_attach = on_attach,
-  single_file_support = true,
-  filetype = { 'c', 'cpp' },
+    handlers = handlers,
+    capabilities = clangd_capabilities,
+    on_attach = on_attach,
+    single_file_support = true,
+    filetype = { 'c', 'cpp' },
 }
 
 -- require('lspconfig').ltex.setup { cmd = { '/home/mhamdi/.cache/ltex-ls-15.2.0/bin/ltex-ls' } }
@@ -100,39 +98,39 @@ require('lspconfig').clangd.setup {
 -- s.getenv("HOME")
 local lang = os.getenv 'PROJECT_LANG' or 'en'
 require('lspconfig').ltex.setup {
-  handlers = handlers,
-  -- capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    -- your other on_attach functions.
-    on_attach(client, bufnr)
-    require('ltex_extra').setup {
-      -- load_langs = { 'fr' }, -- table <string> : languages for witch dictionaries will be loaded
-      init_check = true, -- boolean : whether to load dictionaries on startup
-      path = nil, -- string : path to store dictionaries. Relative path uses current working directory
-      log_level = 'none', -- string : "none", "trace", "debug", "info", "warn", "error", "fatal"
-    }
-  end,
-  settings = {
-    ltex = {
-      language = lang,
-      diagnosticSeverity = 'information',
-      setenceCacheSize = 2000,
-      additionalRules = {
-        enablePickyRules = true,
-        motherTongue = 'en',
-      },
-      trace = { server = 'verbose' },
-      dictionary = {},
-      disabledRules = {
-        -- ['en'] = { 'MORFOLOGIK_RULE_EN' },
-        -- ['en-GB'] = { 'MORFOLOGIK_RULE_EN_GB' },
-        -- ['en-US'] = { 'MORFOLOGIK_RULE_EN_US' },
-        -- ['it'] = { 'MORFOLOGIK_RULE_IT_IT' },
-      },
-      hiddenFalsePositives = {},
-      -- languageToolHttpServerUri = 'http://localhost:8081/v2',
+    handlers = handlers,
+    -- capabilities = capabilities,
+    on_attach = function(client, bufnr)
+        -- your other on_attach functions.
+        on_attach(client, bufnr)
+        require('ltex_extra').setup {
+            -- load_langs = { 'fr' }, -- table <string> : languages for witch dictionaries will be loaded
+            init_check = true, -- boolean : whether to load dictionaries on startup
+            path = nil, -- string : path to store dictionaries. Relative path uses current working directory
+            log_level = 'none', -- string : "none", "trace", "debug", "info", "warn", "error", "fatal"
+        }
+    end,
+    settings = {
+        ltex = {
+            language = lang,
+            diagnosticSeverity = 'information',
+            setenceCacheSize = 2000,
+            additionalRules = {
+                enablePickyRules = true,
+                motherTongue = 'en',
+            },
+            trace = { server = 'verbose' },
+            dictionary = {},
+            disabledRules = {
+                -- ['en'] = { 'MORFOLOGIK_RULE_EN' },
+                -- ['en-GB'] = { 'MORFOLOGIK_RULE_EN_GB' },
+                -- ['en-US'] = { 'MORFOLOGIK_RULE_EN_US' },
+                -- ['it'] = { 'MORFOLOGIK_RULE_IT_IT' },
+            },
+            hiddenFalsePositives = {},
+            -- languageToolHttpServerUri = 'http://localhost:8081/v2',
+        },
     },
-  },
 }
 
 ---- lua sumneko
@@ -141,48 +139,48 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 require('lspconfig').sumneko_lua.setup {
-  handlers = handlers,
-  capabilities = capabilities,
-  on_attach = on_attach,
-  flags = { debounce_text_changes = 150 },
+    handlers = handlers,
+    capabilities = capabilities,
+    on_attach = on_attach,
+    flags = { debounce_text_changes = 150 },
 
-  -- settings = {
-  --   Lua = {
-  --     completion = {
-  --       callSnippet = 'Replace',
-  --     },
-  --   },
-  -- },
-  settings = {
-    Lua = {
-      completion = {
-        callSnippet = 'Replace',
-      },
-      runtime = {
-        version = 'LuaJIT',
-        path = runtime_path,
-      },
-      diagnostics = {
-        enable_check_codestyle = true,
-        globals = {
-          'packer_plugins',
-          'use',
-          'vim',
+    -- settings = {
+    --   Lua = {
+    --     completion = {
+    --       callSnippet = 'Replace',
+    --     },
+    --   },
+    -- },
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = 'Replace',
+            },
+            runtime = {
+                version = 'LuaJIT',
+                path = runtime_path,
+            },
+            diagnostics = {
+                enable_check_codestyle = true,
+                globals = {
+                    'packer_plugins',
+                    'use',
+                    'vim',
+                },
+            },
+            workspace = {
+                library = {
+                    vim.api.nvim_get_runtime_file('', true),
+                },
+                checkThirdParty = false, -- FIX the sumneko need config
+                -- Make the server await for loading Neovim runtime files
+                maxPreload = 1000,
+                preloadFileSize = 500,
+            },
+            telemetry = {
+                enable = false,
+            },
         },
-      },
-      workspace = {
-        library = {
-          vim.api.nvim_get_runtime_file('', true),
-        },
-        checkThirdParty = false, -- FIX the sumneko need config
-        -- Make the server await for loading Neovim runtime files
-        maxPreload = 1000,
-        preloadFileSize = 500,
-      },
-      telemetry = {
-        enable = false,
-      },
     },
-  },
 }
 vim.cmd 'LspStart'
