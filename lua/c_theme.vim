@@ -14,5 +14,6 @@ hi LspDiagnosticsVirtualTextWarning     guifg=Yellow ctermfg=Yellow
 hi LspDiagnosticsVirtualTextInformation guifg=White  ctermfg=White
 hi LspDiagnosticsVirtualTextHint        guifg=White  ctermfg=White
 
+hi WinBar guibg=NONE
 
 set guifont=FiraCode\ Nerd\ Font:h14
