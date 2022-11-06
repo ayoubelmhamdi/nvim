@@ -1,14 +1,13 @@
 require 'impatient'
 
-vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
-
 VIM_REQ = function(name)
   local nvim = vim.fn.stdpath 'config' .. '/lua/'
   vim.cmd('source ' .. nvim .. name .. '.vim')
 end
 VIM_REQ 'c_startup'
 
-local startup = function()
+vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
+local load_plugin_after_nvim_opened = function()
   local opt = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
   for dir in io.popen('ls ' .. opt):lines() do
     vim.cmd('packadd ' .. dir)
@@ -62,7 +61,7 @@ vim.api.nvim_clear_autocmds { group = augroup }
 vim.api.nvim_create_autocmd('CursorMoved', {
   group = augroup,
   callback = function()
-    startup()
+    load_plugin_after_nvim_opened()
     pcall(vim.api.nvim_del_augroup_by_name, 'BlazinglyFast')
   end,
 })
