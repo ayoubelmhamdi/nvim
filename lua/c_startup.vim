@@ -31,6 +31,21 @@ vim.opt.termguicolors = true
 vim.opt.background = 'dark'
 -- vim.o.laststatus = 0
 vim.wo.signcolumn = 'yes'
+
+local exclude = {
+  ['terminal'] = true,
+  ['toggleterm'] = true,
+  ['prompt'] = true,
+  ['NvimTree'] = true,
+  ['help'] = true,
+}
+
+if vim.api.nvim_win_get_config(0).zindex or exclude[vim.bo.filetype] then
+  vim.wo.winbar = ''
+else
+  vim.wo.winbar = ''
+end
+
 EOF
 
 set rnu nu
@@ -40,3 +55,4 @@ hi LineNr  guifg=#505050   guibg=NONE
 
 hi SignColumn    guibg=NONE
 hi Folded        guibg=NONE
+hi WinBar        guibg=NONE
