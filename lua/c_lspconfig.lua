@@ -24,11 +24,9 @@ local handlers = {
 }
 
 local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- plugins
-  -- require('nvim-navic').attach(client, bufnr) -- show the class>fun>int
-
+  -- keymapping
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
