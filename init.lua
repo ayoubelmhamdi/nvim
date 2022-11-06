@@ -17,9 +17,8 @@ local startup = function()
   require 'c_cmp'
   require 'c_lspconfig'
 
-  ---
-  ---third part vimL plugin
-  ---
+  ---third part vimL plugin --
+  ----------------------------
   require 'c_lspsaga'
   require 'c_lspkind'
   require 'c_null-ls'
@@ -50,8 +49,8 @@ local startup = function()
   require 'c_function'
   VIM_REQ 'c_gdiff'
 
-  VIM_REQ 'c_theme'
   require 'c_onenord'
+  VIM_REQ 'c_theme'
 
   --
   -- Highlight should at the end
