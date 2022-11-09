@@ -127,7 +127,7 @@ cmp.setup {
     ['<C-i>'] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
     ['<C-o>'] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-u>'] = cmp.mapping.scroll_docs(4),
     ['<C-y>'] = cmp.mapping.abort(),
     ['<c-e>'] = cmp.mapping(
       cmp.mapping.confirm {
