@@ -72,6 +72,7 @@ packer.startup(function(use)
   use { 'kyazdani42/nvim-web-devicons', opt = true }
   use { 'lukas-reineke/indent-blankline.nvim', opt = true }
   use { 'nvim-lualine/lualine.nvim', opt = true }
+  use { "b0o/incline.nvim" }
 
   --@ use {
   --@ 	'norcalli/nvim-colorizer.lua' ,
