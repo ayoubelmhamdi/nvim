@@ -1,10 +1,10 @@
     vim.cmd [[
-        hi Indent1 guifg=#3A2A1A gui=nocombine
-        hi Indent2 guifg=#3A2A1A gui=nocombine
-        hi Indent3 guifg=#3A2A1A gui=nocombine
-        hi Indent4 guifg=#3A2A1A gui=nocombine
-        hi Indent5 guifg=#3A2A1A gui=nocombine
-        hi Indent6 guifg=#3A2A1A gui=nocombine
+        hi Indent1 guifg=#3A2A1A guibg=NONE
+        hi Indent2 guifg=#3A2A1A guibg=NONE
+        hi Indent3 guifg=#3A2A1A guibg=NONE
+        hi Indent4 guifg=#3A2A1A guibg=NONE
+        hi Indent5 guifg=#3A2A1A guibg=NONE
+        hi Indent6 guifg=#3A2A1A guibg=NONE
     ]]
 
     require('indent_blankline').setup {
