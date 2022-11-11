@@ -1,6 +1,6 @@
--- if true then
---   return
--- end
+if true then
+  return
+end
 local myfilename = function()
   -- print("aa" .. vim.fn.expand('@%'))
   -- print("aa" .. expand('@%'))
