@@ -3,9 +3,9 @@ local saga = require 'lspsaga'
 
 saga.init_lsp_saga {
   border_style = 'rounded',
-  symbol_in_winbar = {
-    in_custom = true,
-  },
+  -- symbol_in_winbar = {
+  --   in_custom = true,
+  -- },
 }
 
 -- local function config_winbar()
@@ -30,39 +30,39 @@ saga.init_lsp_saga {
 --     vim.wo.winbar = sym
 --   end
 -- end
-local function config_winbar_or_statusline()
-    local exclude = {
-        ['terminal'] = true,
-        ['toggleterm'] = true,
-        ['prompt'] = true,
-        ['NvimTree'] = true,
-        ['help'] = true,
-    } -- Ignore float windows and exclude filetype
-    if vim.api.nvim_win_get_config(0).zindex or exclude[vim.bo.filetype] then
-        vim.wo.winbar = ''
-    else
-        local ok, lspsaga = pcall(require, 'lspsaga.symbolwinbar')
-        local sym
-        if ok then sym = lspsaga.get_symbol_node() end
-        local win_val = ''
-        win_val = ' ' -- always set space for winbar
-        if sym ~= nil then win_val = win_val .. sym end
-        vim.wo.winbar = win_val
-    end
-end
+-- local function config_winbar_or_statusline()
+--     local exclude = {
+--         ['terminal'] = true,
+--         ['toggleterm'] = true,
+--         ['prompt'] = true,
+--         ['NvimTree'] = true,
+--         ['help'] = true,
+--     } -- Ignore float windows and exclude filetype
+--     if vim.api.nvim_win_get_config(0).zindex or exclude[vim.bo.filetype] then
+--         vim.wo.winbar = ''
+--     else
+--         local ok, lspsaga = pcall(require, 'lspsaga.symbolwinbar')
+--         local sym
+--         if ok then sym = lspsaga.get_symbol_node() end
+--         local win_val = ''
+--         win_val = ' ' -- always set space for winbar
+--         if sym ~= nil then win_val = win_val .. sym end
+--         vim.wo.winbar = win_val
+--     end
+-- end
 
 
-local events = { 'BufEnter', 'BufWinEnter', 'CursorMoved' }
-
-vim.api.nvim_create_autocmd(events, {
-    pattern = '*',
-    callback = function() config_winbar_or_statusline() end,
-})
-
-vim.api.nvim_create_autocmd('User', {
-    pattern = 'LspsagaUpdateSymbol',
-    callback = function() config_winbar_or_statusline() end,
-})
+-- local events = { 'BufEnter', 'BufWinEnter', 'CursorMoved' }
+--
+-- vim.api.nvim_create_autocmd(events, {
+--     pattern = '*',
+--     callback = function() config_winbar_or_statusline() end,
+-- })
+--
+-- vim.api.nvim_create_autocmd('User', {
+--     pattern = 'LspsagaUpdateSymbol',
+--     callback = function() config_winbar_or_statusline() end,
+-- })
 
 keymap({ 'n', 'v' }, ',ca', '<cmd>Lspsaga code_action<CR>', { silent = true })
 keymap('n', '<space>rn', '<cmd>Lspsaga rename<CR>', { silent = true })
