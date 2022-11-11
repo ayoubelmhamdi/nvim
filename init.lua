@@ -6,7 +6,7 @@ VIM_REQ = function(name)
 end
 VIM_REQ 'c_startup'
 
-vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('jk', true, false, true), 'm', true)
+vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('zzjk', true, false, true), 'm', true)
 local load_plugin_after_nvim_opened = function()
   local opt = vim.fn.stdpath 'data' .. '/site/pack/packer/opt/'
   for dir in io.popen('ls ' .. opt):lines() do
@@ -26,6 +26,7 @@ local load_plugin_after_nvim_opened = function()
   require 'c_devicons'
   require 'c_indent-blankline'
   require 'c_lualine'
+  require 'c_incline'
   require 'c_nvim-tree'
 
   require 'c_telescope'
