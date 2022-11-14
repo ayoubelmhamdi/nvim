@@ -23,13 +23,25 @@ local handlers = {
   ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
 }
 
-local on_attach = function(client, bufnr)
+vim.g.isLspStart= true
+local toggleLsp= function()
+  if vim.g.isLspStart then
+    vim.cmd'LspStop'
+    vim.g.isLspStart= false
+  else
+    vim.cmd'LspStart'
+    vim.g.isLspStart= true
+  end
+ require("null-ls").toggle({})
+end
 
+local on_attach = function(client, bufnr)
   -- plugins
   -- keymapping
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  vim.keymap.set('n', '<space>sl', toggleLsp, bufopts)
   vim.keymap.set('n', ',lR', require('telescope.builtin').lsp_definitions, bufopts)
   vim.keymap.set('n', ',lr', require('telescope.builtin').lsp_references, bufopts)
   vim.keymap.set('n', ',ly', require('telescope.builtin').lsp_document_symbols, bufopts)
