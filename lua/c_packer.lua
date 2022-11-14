@@ -72,7 +72,7 @@ packer.startup(function(use)
   use { 'kyazdani42/nvim-web-devicons', opt = true }
   use { 'lukas-reineke/indent-blankline.nvim', opt = true }
   use { 'nvim-lualine/lualine.nvim', opt = true }
-  use { "b0o/incline.nvim" }
+  use { 'b0o/incline.nvim' }
 
   --@ use {
   --@ 	'norcalli/nvim-colorizer.lua' ,
@@ -98,6 +98,7 @@ packer.startup(function(use)
   use { 'JoosepAlviste/nvim-ts-context-commentstring', opt = true }
   use { 'David-Kunz/treesitter-unit', opt = true }
   use { 'lewis6991/spellsitter.nvim', opt = true }
+  use { 'https://github.com/cshuaimin/ssr.nvim', opt = true }
 
   -- ████████ ███████ ██      ███████ ███████  ██████  ██████  ██████  ███████
   --    ██    ██      ██      ██      ██      ██      ██    ██ ██   ██ ██
