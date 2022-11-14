@@ -81,6 +81,11 @@ null_ls.setup {
     diagnostics.cppcheck,
     -- Matlab
     diagnostics.mh_lint,
+    -- md
+    formatting.markdown_toc,
+    -- formatting.markdownlint,
+    -- diagnostics.markdownlint,
+    formatting.mdformat,
   },
   on_attach = on_attach,
 }
