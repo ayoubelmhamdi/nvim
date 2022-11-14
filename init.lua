@@ -23,6 +23,7 @@ local load_plugin_after_nvim_opened = function()
   require 'c_null-ls'
 
   require 'c_treesitter'
+  require 'c_ssr'
   require 'c_devicons'
   require 'c_indent-blankline'
   require 'c_lualine'
