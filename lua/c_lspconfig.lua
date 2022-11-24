@@ -23,16 +23,16 @@ local handlers = {
   ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
 }
 
-vim.g.isLspStart= true
-local toggleLsp= function()
+vim.g.isLspStart = true
+local toggleLsp = function()
   if vim.g.isLspStart then
-    vim.cmd'LspStop'
-    vim.g.isLspStart= false
+    vim.cmd 'LspStop'
+    vim.g.isLspStart = false
   else
-    vim.cmd'LspStart'
-    vim.g.isLspStart= true
+    vim.cmd 'LspStart'
+    vim.g.isLspStart = true
   end
- require("null-ls").toggle({})
+  require('null-ls').toggle {}
 end
 
 local on_attach = function(client, bufnr)
@@ -74,7 +74,7 @@ local on_attach = function(client, bufnr)
   end, bufopts)
 end
 
-local servers = { 'bashls', 'pyright', 'rust_analyzer', 'tsserver', 'dartls' }
+local servers = { 'bashls', 'pyright', 'rust_analyzer', 'tsserver' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     handlers = handlers,
@@ -193,4 +193,26 @@ require('lspconfig').sumneko_lua.setup {
     },
   },
 }
-vim.cmd 'LspStart'
+-- vim.cmd 'LspStart'
+-- Configure Flutter lsp through flutter-tools.nvim
+require('flutter-tools').setup {
+  decorations = {
+    statusline = {
+      app_version = true,
+      device = true,
+    },
+  },
+  -- flutter_lookup_cmd = "dirname $(which flutter)",
+  widget_guides = {
+    enabled = true,
+  },
+  lsp = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    handlers = handlers,
+    settings = {
+      showTodos = true,
+      completeFunctionCalls = true,
+    },
+  },
+}
