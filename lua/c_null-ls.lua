@@ -1,29 +1,5 @@
 -- if true then return end
 local null_ls = require 'null-ls'
---disble ---- start new helps--
---disble --local helpers = require 'null-ls.helpers'
---disble --
---disble --local mh_lint2 = {
---disble --  method = null_ls.methods.DIAGNOSTICS,
---disble --  filetypes = { 'matlab', 'octave' },
---disble --  generator = null_ls.generator ({
---disble --    command = 'mh_lint',
---disble --    args = { '--brief', '$FILENAME' },
---disble --    to_stdin = false,
---disble --    from_stderr = true,
---disble --    format = 'line',
---disble --    on_output = helpers.diagnostics.from_pattern ({
---disble --      {
---disble --        pattern = [[(%d+):(%d+): (%w+): (.*)]],
---disble --        groups = { "row", "col", "severity", "message" },
---disble --      },
---disble --    }),
---disble --    factory = helpers.generator_factory,
---disble --  }),
---disble --}
---disble --
---disble --null_ls.register(mh_lint2)
---disble ---- end new helps--
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
@@ -77,10 +53,11 @@ null_ls.setup {
     code_actions.shellcheck,
     formatting.shellharden,
     -- C
-    formatting.uncrustify,
+    -- formatting.uncrustify,
+    formatting.clang_format,
     diagnostics.cppcheck,
     -- Matlab
-    diagnostics.mh_lint,
+    -- diagnostics.mh_lint,
     -- md
     formatting.markdown_toc,
     -- formatting.markdownlint,
