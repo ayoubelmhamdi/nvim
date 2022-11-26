@@ -7,9 +7,10 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 -- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 -- vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- capabilities.textDocument.foldingRange = { dynamicRegistration = false, lineFoldingOnly = true }
 
 local handlers = {
@@ -41,7 +42,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
-  vim.keymap.set('n', '<space>sl', toggleLsp, bufopts)
+  vim.keymap.set('n', '<space>tl', toggleLsp, bufopts)
   vim.keymap.set('n', ',lR', require('telescope.builtin').lsp_definitions, bufopts)
   vim.keymap.set('n', ',lr', require('telescope.builtin').lsp_references, bufopts)
   vim.keymap.set('n', ',ly', require('telescope.builtin').lsp_document_symbols, bufopts)
