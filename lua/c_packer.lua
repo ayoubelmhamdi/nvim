@@ -138,8 +138,8 @@ packer.startup(function(use)
   --  ██████ ██      ██ ██
 
   use { 'rafamadriz/friendly-snippets', opt = true }
-  use { 'hrsh7th/nvim-cmp' }
   use { 'L3MON4D3/LuaSnip', tag = 'v<CurrentMajor>.*', opt = true }
+  use { 'hrsh7th/nvim-cmp' }
   use { 'saadparwaiz1/cmp_luasnip' }
   use { 'hrsh7th/cmp-nvim-lua' }
   use { 'hrsh7th/cmp-nvim-lsp' }
@@ -149,6 +149,9 @@ packer.startup(function(use)
   use { 'hrsh7th/cmp-cmdline' }
   use { 'ray-x/cmp-treesitter' }
   use { 'octaltree/cmp-look' }
+  use { 'github.com/lukas-reineke/cmp-rg' }
+  use { 'https://github.com/mstanciu552/cmp-matlab' }
+  use { 'https://github.com/tzachar/cmp-tabnine', run = './install.sh' }
   -- use { 'wxxxcxx/cmp-browser-source' } -- test get suggestions from all stings in all pages webs opend by chrome
   -- use { 'f3fora/cmp-spell' }
   -- use { 'hrsh7th/cmp-emoji' }
