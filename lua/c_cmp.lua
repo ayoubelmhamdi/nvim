@@ -64,60 +64,108 @@ My_Symbols = {
 
 ------------------------------cmp-----------------------------------------------------
 local cmp = require 'cmp'
+local lspkind = require 'lspkind'
 
+local source_mapping = {
+  browser = '[BROWSER]',
+  buffer = '[BUFFER]',
+  look = '[LOOK]',
+
+  nvim_lsp_signature_help = '[LSPH]',
+  path = '[PATH]',
+  luasnip = '[LuaSnip]',
+  nvim_lsp = '[LSP]',
+  nvim_lua = '[API]',
+  cmp_tabnine = '[TN]',
+  treesitter = '[TS]',
+  cmp_matlab = '[MATLAB]',
+  rg = '[RG]',
+  spell = '[Spell]',
+}
 cmp.setup {
   formatting = {
-    fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
-      vim_item.menu = ({
-        buffer = '[Buffer]',
-        nvim_lsp = '[LSP]',
-        nvim_lua = '[API]',
-        path = '[Filesystem]',
-        luasnip = '[Snippet]',
-        spell = '[Spell]',
-        browser = '[BROWSER]',
-        look = '[LOOK]',
-      })[entry.source.name]
-      vim_item.kind = My_Symbols[vim_item.kind]
+      -- if you have lspkind installed, you can use it like
+      -- in the following line:
+      vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = 'symbol' })
+      vim_item.menu = source_mapping[entry.source.name]
+      if entry.source.name == 'cmp_tabnine' then
+        local detail = (entry.completion_item.data or {}).detail
+        vim_item.kind = ''
+        if detail and detail:find '.*%%.*' then
+          vim_item.kind = vim_item.kind .. ' ' .. detail
+        end
+
+        if (entry.completion_item.data or {}).multiline then
+          vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
+        end
+      end
+      local maxwidth = 80
+      vim_item.abbr = string.sub(vim_item.abbr, 1, maxwidth)
       return vim_item
     end,
   },
+  -- formatting = {
+  --   fields = { 'kind', 'abbr', 'menu' },
+  --   format = function(entry, vim_item)
+  --     vim_item.menu = ({
+  --       browser = '[BROWSER]',
+  --       buffer = '[BUFFER]',
+  --       look = '[LOOK]',
+  --
+  --       nvim_lsp_signature_help = '[LSPH]',
+  --       path = '[PATH]',
+  --       luasnip = '[LuaSnip]',
+  --       nvim_lsp = '[LSP]',
+  --       nvim_lua = '[API]',
+  --       tabnine = '[TN]',
+  --       treesitter = '[TS]',
+  --       cmp_matlab = '[MATLAB]',
+  --       rg = '[RG]',
+  --       spell = '[Spell]',
+  --     })[entry.source.name]
+  --     vim_item.kind = My_Symbols[vim_item.kind]
+  --     return vim_item
+  --   end,
+  -- },
 
   sources = cmp.config.sources {
-    { name = 'luasnip', priority = 100 }, -- For luasnip users.
-    { name = 'nvim_lua', priority = 90 },
-    { name = 'nvim_lsp', priority = 90 },
-    { name = 'nvim_lsp_signature_help', priority = 100 },
-    { name = 'path', option = { trailing_slash = true }, priority = 80 },
-    { name = 'cmp_tabnine', priority = 70 },
+    { name = 'path', option = { trailing_slash = true }, priority = 10 },
+    { name = 'nvim_lsp_signature_help', priority = 89 },
+    { name = 'nvim_lsp', priority = 88 },
+    { name = 'nvim_lua', priority = 87 },
+
+    { name = 'cmp_tabnine', priority = 99 },
+
+    { name = 'cmp_matlab', priority = 95 },
+    { name = 'luasnip', priority = 90 },
     { name = 'treesitter', priority = 80 },
-    { name = 'cmp_matlab', priority = 90 },
+    { name = 'rg', priority = 70 },
     -- { name = 'spell' }, { name = 'spell', keyword_length = 2 },
-    {
-      name = 'look',
-      priority = 60,
-      keyword_length = 2,
-      option = {
-        convert_case = true,
-        loud = true,
-        --dict = '/usr/share/dict/words'
-      },
-    },
-    {
-      name = 'buffer',
-      priority = 70,
-      option = {
-        get_bufnrs = function()
-          local buf = vim.api.nvim_get_current_buf()
-          local byte_size = vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf))
-          if byte_size > 2048 * 2048 then
-            return {}
-          end
-          return { buf }
-        end,
-      },
-    },
+    -- {
+    --   name = 'look',
+    --   priority = 60,
+    --   keyword_length = 5,
+    --   option = {
+    --     convert_case = true,
+    --     loud = true,
+    --     --dict = '/usr/share/dict/words'
+    --   },
+    -- },
+    -- {
+    --   name = 'buffer',
+    --   priority = 70,
+    --   option = {
+    --     get_bufnrs = function()
+    --       local buf = vim.api.nvim_get_current_buf()
+    --       local byte_size = vim.api.nvim_buf_get_offset(buf, vim.api.nvim_buf_line_count(buf))
+    --       if byte_size > 2048 * 2048 then
+    --         return {}
+    --       end
+    --       return { buf }
+    --     end,
+    --   },
+    -- },
     -- { name = 'browser' },
   },
 
@@ -229,4 +277,17 @@ vim.keymap.set('i', '<c-l>', function()
   end
 end)
 
-vim.keymap.set('i', '<c-u>', require 'luasnip.extras.select_choice')
+--vim.keymap.set('i', '<c-u>', require 'luasnip.extras.select_choice')
+
+require('cmp_tabnine.config'):setup {
+  max_lines = 1000,
+  max_num_results = 2,
+  sort = true,
+  run_on_every_keystroke = true,
+  snippet_placeholder = '..',
+  ignored_file_types = { -- default is not to ignore
+    -- uncomment to ignore in lua:
+    -- lua = true
+  },
+  show_prediction_strength = true,
+}
