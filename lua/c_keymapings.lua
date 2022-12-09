@@ -11,8 +11,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_set_keymap('n', '<space><space>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-w>o', ':Zoom<cr>', { noremap = true, silent = true })
 
 vim.cmd [[
+
 nnoremap x "_x
 nnoremap X "_X
 nnoremap c "_c
