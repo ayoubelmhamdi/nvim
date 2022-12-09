@@ -61,3 +61,21 @@ hi WinBar        guibg=NONE
 
 hi EndOfBuffer   guifg=NONE guibg=NONE
 hi EndOfBuffer   guibg=NONE guibg=NONE
+
+
+
+" transparent backgroub
+" hi Normal guibg=NONE ctermbg=NONE
+
+" Errors in Red
+hi LspDiagnosticsVirtualTextError       guifg=Red    ctermfg=Red
+" Warnings in Yellow
+hi LspDiagnosticsVirtualTextWarning     guifg=Yellow ctermfg=Yellow
+" Info and Hints in White
+hi LspDiagnosticsVirtualTextInformation guifg=White  ctermfg=White
+hi LspDiagnosticsVirtualTextHint        guifg=White  ctermfg=White
+
+hi WinBar guibg=NONE
+
+set guifont=FiraCode\ Nerd\ Font:h14
+
