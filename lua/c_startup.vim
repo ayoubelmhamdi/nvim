@@ -1,13 +1,15 @@
+colorscheme gruvbox-material
+
 "syntax off
 "filetype plugin indent off
 
-function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunction
-
+" function! SynStack()
+"   if !exists("*synstack")
+"     return
+"   endif
+"   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunction
+"
 " restore cursor position
 augroup restore_pos |
   au!
@@ -31,6 +33,7 @@ vim.opt.termguicolors = true
 vim.opt.background = 'dark'
 -- vim.o.laststatus = 0
 vim.wo.signcolumn = 'yes'
+vim.wo.fillchars='eob: '
 -- local exclude = {
 --   ['terminal'] = true,
 --   ['toggleterm'] = true,
@@ -55,3 +58,6 @@ hi LineNr  guifg=#505050   guibg=NONE
 hi SignColumn    guibg=NONE
 hi Folded        guibg=NONE
 hi WinBar        guibg=NONE
+
+hi EndOfBuffer   guifg=NONE guibg=NONE
+hi EndOfBuffer   guibg=NONE guibg=NONE
