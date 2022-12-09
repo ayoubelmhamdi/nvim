@@ -28,7 +28,7 @@ local load_plugin_after_nvim_opened = function()
   require 'c_indent-blankline'
   require 'c_lualine'
   require 'c_incline'
-  require 'c_nvim-tree'
+  --  require 'c_nvim-tree'
 
   require 'c_telescope'
   require 'c_autopair'
@@ -50,7 +50,7 @@ local load_plugin_after_nvim_opened = function()
   require 'c_function'
   VIM_REQ 'c_gdiff'
 
-  require 'c_onenord'
+  -- require 'c_onenord'
   VIM_REQ 'c_theme'
 
   --
@@ -58,12 +58,13 @@ local load_plugin_after_nvim_opened = function()
   -- VIM_REQ 'c_matlab'
 end
 
-local augroup = vim.api.nvim_create_augroup('BlazinglyFast', {})
-vim.api.nvim_clear_autocmds { group = augroup }
-vim.api.nvim_create_autocmd('CursorMoved', {
-  group = augroup,
-  callback = function()
-    load_plugin_after_nvim_opened()
-    pcall(vim.api.nvim_del_augroup_by_name, 'BlazinglyFast')
-  end,
-})
+load_plugin_after_nvim_opened()
+-- local augroup = vim.api.nvim_create_augroup('BlazinglyFast', {})
+-- vim.api.nvim_clear_autocmds { group = augroup }
+-- vim.api.nvim_create_autocmd('CursorMoved', {
+--   group = augroup,
+--   callback = function()
+--     load_plugin_after_nvim_opened()
+--     pcall(vim.api.nvim_del_augroup_by_name, 'BlazinglyFast')
+--   end,
+-- })
