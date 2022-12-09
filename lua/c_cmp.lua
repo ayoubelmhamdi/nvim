@@ -135,7 +135,7 @@ cmp.setup {
     { name = 'nvim_lsp', priority = 88 },
     { name = 'nvim_lua', priority = 87 },
 
-    { name = 'cmp_tabnine', priority = 99 },
+    -- { name = 'cmp_tabnine', priority = 99 },
 
     { name = 'cmp_matlab', priority = 95 },
     { name = 'luasnip', priority = 90 },
@@ -280,7 +280,7 @@ end)
 --vim.keymap.set('i', '<c-u>', require 'luasnip.extras.select_choice')
 
 require('cmp_tabnine.config'):setup {
-  max_lines = 1000,
+  max_lines = 40,
   max_num_results = 2,
   sort = true,
   run_on_every_keystroke = true,
