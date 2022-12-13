@@ -61,6 +61,7 @@ packer.startup(function(use)
 
   -- use { 'kyazdani42/nvim-tree.lua' }
   use 'https://github.com/oberblastmeister/zoom.nvim'
+  use 'https://github.com/yazgoo/vmux'
   use '/data/projects/lua/vf.nvim'
   -- ████████ ██   ██ ███████ ███    ███ ███████
   --    ██    ██   ██ ██      ████  ████ ██
