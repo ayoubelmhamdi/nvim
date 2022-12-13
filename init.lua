@@ -68,3 +68,9 @@ load_plugin_after_nvim_opened()
 --     pcall(vim.api.nvim_del_augroup_by_name, 'BlazinglyFast')
 --   end,
 -- })
+
+vim.keymap.set('n', '<space>s', function()
+  package.loaded.vf = nil
+  vim.cmd 'w'
+  require('vf').test()
+end, {})
